@@ -5,12 +5,14 @@ body {
 }
 
 header {
+
     display: flex;
     justify-content: center;
     background-color: rgb(161, 159, 159);
 }
 
 #titulo {
+
     font-size: 45px;
     font-weight: 750;
     text-shadow: 0px 8px 15px black;
@@ -22,6 +24,8 @@ header {
 }
 
 #navegacao {
+
+
     display: flex;
     justify-content: space-evenly;
     border-top: 1px solid gray;
@@ -62,8 +66,7 @@ img {
     width: 170px;
 }
 
-.camisa-masculina,
-.camisa-feminina {
+.produto{
 
     margin-bottom: 30px;
     border: 1px solid gray;
@@ -87,12 +90,6 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 0px 0px 15px 15px;
-}
-
-
-.camisa-masculina:hover,
-.camisa-feminina:hover {
-    box-shadow: 0px 0px 15px rgba(197, 249, 188, 0.793);
 }
 
 section {
@@ -120,6 +117,3 @@ section {
     text-align: center;
 }
 
-.img-kit:hover{
-    box-shadow: 0px 0px 15px rgba(197, 249, 188, 0.793);
-}
