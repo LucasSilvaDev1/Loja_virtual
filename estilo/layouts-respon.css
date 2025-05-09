@@ -1,0 +1,15 @@
+@media (min-width: 641px) {
+    #catalogo {  
+            grid-template-columns: 1fr 1fr 1fr ;
+            grid-template-rows: 1fr; 
+    }
+    .kit-masculino{
+        max-width: 380px;
+    }
+}
+
+@media (min-width:1025px) {
+    #catalogo {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
