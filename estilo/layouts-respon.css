@@ -6,6 +6,10 @@
     .kit-masculino{
         max-width: 380px;
     }
+
+    .kits2 {
+        grid-column: 2 /span 2;
+    }
 }
 
 @media (min-width:1025px) {
