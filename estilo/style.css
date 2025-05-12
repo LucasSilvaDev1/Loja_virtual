@@ -16,8 +16,9 @@ header {
 }
 
 #titulo {
-
-    font-size: 45px;
+    padding: 0;
+    margin: 10px 0px;
+    font-size: 20px;
     font-weight: 750;
     text-shadow: 0px 8px 15px black;
 }
@@ -29,9 +30,9 @@ header {
 
 #navegacao {
 
-
+    width: 100vw;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     background-color: rgb(160, 160, 160);
@@ -39,11 +40,26 @@ header {
 }
 
 .menu{
-
-    width: 20%;
+    justify-items: flex-end;
     color: black;
     background-color: transparent;
     border: none;
+    padding: 6px 15px;
+    margin-right: 10px;
+}
+
+
+.btns{
+    margin-left: auto;
+    
+}
+
+.btn{
+    padding: 7px 15px;
+    margin: 0;
+
+    border: none;
+    background-color: transparent;
 }
 
 .categorias {
@@ -66,7 +82,7 @@ header {
     animation: menu 0.5s linear;
 }
 
-.categorias:hover, .menu:hover {
+.btn:hover, .menu:hover {
     background-color: rgb(181, 181, 181);
     box-shadow: 0px 0px 10px rgb(181, 181, 181);
 }
@@ -79,6 +95,19 @@ header {
     align-items: center;
     justify-items: center;
     grid-auto-flow: row;
+}
+
+.divCamisa{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100vw;
+    margin: 20px;
+}
+
+.dcamisa{
+    margin: 10px 20px;
 }
 
 img {
@@ -154,7 +183,7 @@ section {
      cursor: pointer;
 }
 
-.pagkit:active{
+.pagkit:hover{
     animation: click-animation 0.5s ease-in-out;
 }
 
