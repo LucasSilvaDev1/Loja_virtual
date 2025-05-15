@@ -71,21 +71,8 @@ header {
     flex-direction: row;
     justify-self: flex-end;
     overflow-x: auto;
-    width: 40%;
+    width: 60%;
     margin: 20px;
-}
-
-.divCamisa2{
-    display: flex;
-    flex-direction: row;
-    justify-self: flex-end;
-    overflow-x: scroll;
-    width: 40%;
-    margin: 20px;
-}
-
-.dcamisa{
-    margin:0px 10px;
 }
 
 img {
@@ -94,11 +81,30 @@ img {
 }
 
 .produto{
-
     margin: 0px 25px;
-    width: 180px;
-    height: 250px;
+    width: auto;
+    height: 260px;
     text-align: center;
+
+    background-color: rgb(154, 152, 152);
+    color: black;
+}
+
+.classificacao, .classificacao > p{
+    margin: 2px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.descrissao, .descrissao > p{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+}
+
+.produto:hover > .descrissao{
+    animation: click-animation 0.3s ease-in;
 }
 
 section {
@@ -117,7 +123,7 @@ section {
 }
 
 .description{
-    width: 50%;
+    width: 40%;
     text-align: justify;
     margin-top:50px ;
     padding: 10px;
