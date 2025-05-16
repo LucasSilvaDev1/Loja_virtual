@@ -80,6 +80,7 @@ img {
 }
 
 .produto{
+   
     margin: 0px 25px;
     width: auto;
     height: 260px;
@@ -88,6 +89,7 @@ img {
     background-color: rgb(154, 152, 152);
     color: black;
 }
+
 
 .classificacao, .classificacao > p{
     margin: 2px 0px;
@@ -225,7 +227,6 @@ content-visibility: hidden;
 
 .img-kit{
     margin: auto;
-    width: 30%;
 }
 
 @keyframes clicado {
