@@ -30,7 +30,7 @@ header {
 
 #navegacao {
     position: sticky;
-    width: auto;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     border-top: 1px solid gray;
@@ -44,7 +44,6 @@ header {
     background-color: transparent;
     border: none;
     padding: 6px 15px;
-    margin-right: 10px;
 }
 
 
@@ -179,10 +178,11 @@ content-visibility: hidden;
 
 .kit-masculino{
     display: flex;
+    justify-content: center;
     background-color: rgba(128, 128, 128, 0.792);
     padding: 10px;
     border-radius: 10px;
-    max-width: 80vw;
+    width: 80vw;
     height: 225px;
 }
 
@@ -225,6 +225,7 @@ content-visibility: hidden;
 
 .img-kit{
     margin: auto;
+    width: 30%;
 }
 
 @keyframes clicado {
