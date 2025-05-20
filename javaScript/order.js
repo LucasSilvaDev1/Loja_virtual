@@ -36,7 +36,7 @@ function checkScreensize() {
                 </div>   
         `
         divkit.style.height = '450px'
-        
+
     } else {
         divkit.innerHTML = `<div class="textos">
                     <h3 class="titulo item"> Kits em promoção por tempo limitado
@@ -59,7 +59,7 @@ function checkScreensize() {
                 </div>
                 <img id="imgkit" class="img-kit item" src="imgs/kits/kit-ma01.jpg" alt="">`
 
-                divkit.style.height = '225px'
+        divkit.style.height = '225px'
     }
 }
 
@@ -108,17 +108,39 @@ function kit4() {
     document.getElementById('imgkit').src = "imgs/kits/kit-ma04.jpg"
 }
 
-// function addCategorias() {
-//     let btnCA = document.querySelectorAll(".menu")
-//     let categorias = document.querySelectorAll(".categorias")
-
-//     categorias.forEach(categoria => {
-//         if (categoria.classList.contains("hidden")) {
-//             categoria.classList.remove("hidden");
-//         } else {
-//             categoria.classList.add("hidden")
-//         }
-//     })
+// funções de trocar imagens dos articles;
 
 
-// }
+    const img = document.getElementById("imgcS1")
+
+    document.getElementById('Cor1').addEventListener('click', function () {
+
+        if (img.classList.contains('preto')) {
+            img.classList.remove('preto')
+            img.classList.add('branco')
+            img.src = ('imgs/masculino/camisas/street/camisa01-branca-frente.png')
+        }
+    });
+
+    document.getElementById('Cor01').addEventListener('click', function () {
+        if (img.classList.contains('branco')) {
+            img.classList.remove('branco')
+            img.classList.add('preto')
+            img.src = ('imgs/masculino/camisas/street/camisa01-preta-frente.png')
+        }
+    });
+
+
+
+
+    // if (img.classList.contains("imgpreta")) {
+    //     img.src = ("imgs/masculino/camisas/street/camisa01-branca-frente.png")
+    //     img.classList.remove("imgpreta")
+    //     img.classList.add("imgbranca")
+
+    // } else {
+    //     img.src = ("imgs/masculino/camisas/street/camisa01-preta-frente.png")
+    //     img.classList.remove("imgbranca")
+    //     img.classList.add("imgpreta")
+    // }
+

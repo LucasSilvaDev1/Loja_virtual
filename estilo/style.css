@@ -65,6 +65,39 @@ header {
     box-shadow: 0px 0px 10px rgb(181, 181, 181);
 }
 
+.btn-img{
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    width: 50px;
+    height: 45px;
+    padding: 0px;
+}
+
+
+.btn-img > img{
+    width: 45px;
+    height: 40px;
+    margin: 0;
+}
+
+.btn-cor{
+    border-radius: 25px;
+    margin: 5px;
+    border: none;
+    
+    width: 35px;
+    height: 20px;
+}
+
+.cor1{
+    background-color: white;
+}
+
+.cor01{
+    background-color: black;
+}
+
 .divCamisa{
     display: flex;
     flex-direction: row;
@@ -79,8 +112,9 @@ img {
     height: 200px;
 }
 
+
 .produto{
-   
+    display: flex;
     margin: 0px 25px;
     width: auto;
     height: 260px;
@@ -102,10 +136,6 @@ img {
     display: flex;
     justify-content: space-around;
     font-family: sans-serif;
-}
-
-.produto:hover > .descrissao{
-    animation: click-animation 0.3s ease-in;
 }
 
 section {
