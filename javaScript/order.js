@@ -110,37 +110,171 @@ function kit4() {
 
 // funções de trocar imagens dos articles;
 
+// primeira seção de articles
 
-    const img = document.getElementById("imgcS1")
+// article 1
 
-    document.getElementById('Cor1').addEventListener('click', function () {
 
-        if (img.classList.contains('preto')) {
-            img.classList.remove('preto')
-            img.classList.add('branco')
-            img.src = ('imgs/masculino/camisas/street/camisa01-branca-frente.png')
+
+let img = document.getElementById("imgcS1")
+let img1 = document.getElementById('img1')
+let img01 = document.getElementById('img01')
+
+document.getElementById('img1').addEventListener('click', function () {
+
+    if (img.classList.contains('branco')) {
+        if (img.classList.contains('verso')) {
+            img.classList.replace('verso', 'frente')
+            img.src = 'imgs/masculino/camisas/street/camisa01-branca-frente.png'
         }
-    });
-
-    document.getElementById('Cor01').addEventListener('click', function () {
-        if (img.classList.contains('branco')) {
-            img.classList.remove('branco')
-            img.classList.add('preto')
-            img.src = ('imgs/masculino/camisas/street/camisa01-preta-frente.png')
+    } if (img.classList.contains('preto')) {
+        if (img.classList.contains('verso')) {
+            img.classList.replace('verso', 'frente')
+            img.src = 'imgs/masculino/camisas/street/camisa01-preta-frente.png'
         }
-    });
+    }
+
+})
+
+document.getElementById('img01').addEventListener('click', function () {
+
+    if (img.classList.contains('branco')) {
+        if (img.classList.contains('frente')) {
+            img.classList.replace('frente', 'verso')
+            img.src = 'imgs/masculino/camisas/street/camisa01-branca-verso.png'
+        }
+    } if (img.classList.contains('preto')) {
+        if (img.classList.contains('frente')) {
+            img.classList.replace('frente', 'verso')
+            img.src = 'imgs/masculino/camisas/street/camisa01-preta-verso.png'
+        }
+    }
+})
 
 
 
+document.getElementById('Cor1').addEventListener('click', function () {
 
+    if (img.classList.contains('preto')) {
+
+        img.classList.remove('preto')
+        img.classList.add('branco')
+
+        img.src = 'imgs/masculino/camisas/street/camisa01-branca-frente.png'
+        img1.src = 'imgs/masculino/camisas/street/camisa01-branca-frente.png'
+        img01.src = 'imgs/masculino/camisas/street/camisa01-branca-verso.png'
+    }
+});
+
+document.getElementById('Cor01').addEventListener('click', function () {
+    if (img.classList.contains('branco')) {
+
+
+
+        img.classList.remove('branco')
+        img.classList.add('preto')
+
+        img.src = 'imgs/masculino/camisas/street/camisa01-preta-frente.png'
+        img1.src = 'imgs/masculino/camisas/street/camisa01-preta-frente.png'
+        img01.src = 'imgs/masculino/camisas/street/camisa01-preta-verso.png'
+    }
+});
+
+// article 2 
+
+const img2 = document.getElementById('img2')
+
+document.getElementById('cor2').addEventListener('click', function () {
+    img2.src = 'imgs/masculino/camisas/street/camisa02-preta.png'
+})
+document.getElementById('cor02').addEventListener('click', function () {
+    img2.src = "imgs/masculino/camisas/street/camisa02-branca.png"
+})
+document.getElementById('cor002').addEventListener('click', function () {
+    img2.src = 'imgs/masculino/camisas/street/camisa02-vermelha.png'
+})
+
+// article 3
+
+let img3 = document.getElementById('imgcS3')
+let img03 = document.getElementById('img3')
+let img003 = document.getElementById('img03')
+
+document.getElementById('img3').addEventListener('click', function () {
+
+    if (img3.classList.contains('vermelho')) {
+        if (img3.classList.contains('verso')) {
+            img3.classList.replace('verso', 'frente')
+            img3.src = 'imgs/masculino/camisas/street/camisa03-vermelha-frente.png'
+        }
+    } if (img3.classList.contains('preto')) {
+        if (img3.classList.contains('verso')) {
+            img3.classList.replace('verso', 'frente')
+            img3.src = 'imgs/masculino/camisas/street/camisa03-preta-frente.png'
+        }
+    }
+
+})
+
+document.getElementById('img03').addEventListener('click', function () {
+
+    if (img3.classList.contains('vermelho')) {
+        if (img3.classList.contains('frente')) {
+            img3.classList.replace('frente', 'verso')
+            img3.src = 'imgs/masculino/camisas/street/camisa03-vermelha-verso.png'
+        }
+    }
+     if (img3.classList.contains('preto')) {
+        if (img3.classList.contains('frente')){
+            img3.classList.replace('frente', 'verso')
+            img3.src = 'imgs/masculino/camisas/street/camisa03-preta-verso.png'
+        }
+    }
+
+})
+
+document.getElementById('cor3').addEventListener('click', function () {
+    if (img3.classList.contains('preto')) {
+        img3.classList.replace('preto', 'vermelho')
+
+        img3.src = 'imgs/masculino/camisas/street/camisa03-vermelha-frente.png'
+        img03.src = 'imgs/masculino/camisas/street/camisa03-vermelha-frente.png'
+        img003.src = 'imgs/masculino/camisas/street/camisa03-vermelha-verso.png'
+    }
+})
+
+document.getElementById('cor03').addEventListener('click', function () {
+    if (img3.classList.contains('vermelho')) {
+        img3.classList.replace('vermelho', 'preto')
+
+        img3.src = 'imgs/masculino/camisas/street/camisa03-preta-frente.png'
+        img03.src = 'imgs/masculino/camisas/street/camisa03-preta-frente.png'
+        img003.src = 'imgs/masculino/camisas/street/camisa03-preta-verso.png'
+    }
+})
+
+    // article 4
+    let img4 = document.getElementById('img4')
+
+    document.getElementById('cor4').addEventListener('click', function (){
+        img4.src = 'imgs/masculino/camisas/street/camisa04-branca.png'
+    })
+     
+    document.getElementById('cor04').addEventListener('click', function (){
+        img4.src = 'imgs/masculino/camisas/street/camisa04-preta.png'
+    })
+    
+    
+    
+    
     // if (img.classList.contains("imgpreta")) {
-    //     img.src = ("imgs/masculino/camisas/street/camisa01-branca-frente.png")
-    //     img.classList.remove("imgpreta")
-    //     img.classList.add("imgbranca")
+//     img.src = ("imgs/masculino/camisas/street/camisa01-branca-frente.png")
+//     img.classList.remove("imgpreta")
+//     img.classList.add("imgbranca")
 
-    // } else {
-    //     img.src = ("imgs/masculino/camisas/street/camisa01-preta-frente.png")
-    //     img.classList.remove("imgbranca")
-    //     img.classList.add("imgpreta")
-    // }
+// } else {
+//     img.src = ("imgs/masculino/camisas/street/camisa01-preta-frente.png")
+//     img.classList.remove("imgbranca")
+//     img.classList.add("imgpreta")
+// }
 

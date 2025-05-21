@@ -110,6 +110,7 @@ header {
 img {
     background-size: cover;
     height: 200px;
+    transition:  linear 0.5s;
 }
 
 
