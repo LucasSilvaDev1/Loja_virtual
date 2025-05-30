@@ -361,3 +361,57 @@ document.getElementById('corA03').addEventListener('click', function () {
         imgA03.src = 'imgs/masculino/camisas/anime/anime03white.png'
     }
 })
+
+// article 4 
+
+let imgAAAA = document.getElementById('imgA4')
+let imgA4 = document.getElementById('imgA04')
+let imgA04 = document.getElementById('imgA004')
+
+document.getElementById('imgA04').addEventListener('click', function () {
+    if (imgAAAA.classList.contains('preto')) {
+        if (imgAAAA.classList.contains('verso')) {
+            imgAAAA.classList.replace('verso', 'frente')
+            imgAAAA.src = 'imgs/masculino/camisas/anime/anime04-black.png'
+        }
+    }
+
+    if (imgAAAA.classList.contains('branco')) {
+        if (imgAAAA.classList.contains('verso')) {
+            imgAAAA.classList.replace('verso', 'frente')
+            imgAAAA.src = 'imgs/masculino/camisas/anime/anime04-white.png'
+        }
+    }
+})
+
+document.getElementById('imgA004').addEventListener('click', function () {
+    if (imgAAAA.classList.contains('preto')) {
+        if (imgAAAA.classList.contains('frente')) {
+            imgAAAA.classList.replace('frente', 'verso')
+            imgAAAA.src = 'imgs/masculino/camisas/anime/anime04black.png'
+        }
+    }
+
+    if (imgAAAA.classList.contains('branco')) {
+        if (imgAAAA.classList.contains('frente')) {
+            imgAAAA.classList.replace('frente', 'verso')
+            imgAAAA.src = 'imgs/masculino/camisas/anime/anime04white.png'
+        }
+    }
+})
+document.getElementById('corA4').addEventListener('click', function () {
+    if (imgAAAA.classList.contains('branco')) {
+        imgAAAA.classList.replace('branco', 'preto')
+        imgAAAA.src = 'imgs/masculino/camisas/anime/anime04black.png'
+        imgA4.src = 'imgs/masculino/camisas/anime/anime04-black.png'
+        imgA04.src = 'imgs/masculino/camisas/anime/anime04black.png'
+    }
+})
+document.getElementById('corA04').addEventListener('click', function () {
+    if (imgAAAA.classList.contains('preto')) {
+        imgAAAA.classList.replace('preto', 'branco')
+        imgAAAA.src = 'imgs/masculino/camisas/anime/anime04white.png'
+        imgA4.src = 'imgs/masculino/camisas/anime/anime04-white.png'
+        imgA04.src = 'imgs/masculino/camisas/anime/anime04white.png'
+    }
+})
