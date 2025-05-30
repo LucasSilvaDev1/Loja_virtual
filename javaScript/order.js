@@ -1,67 +1,6 @@
 
 
 
-// função para reorganizar o conteudo da seção dos kits
-checkScreensize();
-
-window.addEventListener('resize', checkScreensize);
-
-function checkScreensize() {
-    const width = window.innerWidth
-    const height = window.innerHeight
-
-    let divkit = document.getElementById('divkit')
-
-    if (width <= 580) {
-        divkit.innerHTML = `
-        <div class="textos">
-                    <h3 class="titulo item"> Kits em promoção por tempo limitado
-                    </h3>
-                    <img id="imgkit" class="img-kit item" src="imgs/kits/kit-ma01.jpg" alt="">
-                    <p>opções disponíveis:</p>
-                    <div class="btnsKit">
-                        <button id="btkit1" class="kit1" onclick="bkit1()">1</button>
-                        <button id="btkit2" class="kit2" onclick="kit2()"></button>
-                        <button id="btkit3" class="kit3" onclick="kit3()"></button>
-                        <button id="btkit4" class="kit4" onclick="kit4()"></button>
-                    </div>
-                    <div class="classificacao">
-                        <p>4.5★★★★☆</p>
-                        <p style="font-size: x-small;">235</p>
-                    </div>
-                    <div class="descrissao">
-                        <p>R$ 169,99</p>
-                        <p style="text-decoration: line-through;">R$ 199,99</p>
-                    </div>
-                </div>   
-        `
-        divkit.style.height = '450px'
-
-    } else {
-        divkit.innerHTML = `<div class="textos">
-                    <h3 class="titulo item"> Kits em promoção por tempo limitado
-                    </h3>
-                    <p>opções disponíveis:</p>
-                    <div class="btnsKit">
-                        <button id="btkit1" class="kit1" onclick="bkit1()">1</button>
-                        <button id="btkit2" class="kit2" onclick="kit2()"></button>
-                        <button id="btkit3" class="kit3" onclick="kit3()"></button>
-                        <button id="btkit4" class="kit4" onclick="kit4()"></button>
-                    </div>
-                    <div class="classificacao">
-                        <p>4.5★★★★☆</p>
-                        <p style="font-size: x-small;">235</p>
-                    </div>
-                    <div class="descrissao">
-                        <p>R$ 169,99</p>
-                        <p style="text-decoration: line-through;">R$ 199,99</p>
-                    </div>
-                </div>
-                <img id="imgkit" class="img-kit item" src="imgs/kits/kit-ma01.jpg" alt="">`
-
-        divkit.style.height = '225px'
-    }
-}
 
 
 //funcionalidade dos botões da seção dos kits 
@@ -224,8 +163,8 @@ document.getElementById('img03').addEventListener('click', function () {
             img3.src = 'imgs/masculino/camisas/street/camisa03-vermelha-verso.png'
         }
     }
-     if (img3.classList.contains('preto')) {
-        if (img3.classList.contains('frente')){
+    if (img3.classList.contains('preto')) {
+        if (img3.classList.contains('frente')) {
             img3.classList.replace('frente', 'verso')
             img3.src = 'imgs/masculino/camisas/street/camisa03-preta-verso.png'
         }
@@ -253,28 +192,172 @@ document.getElementById('cor03').addEventListener('click', function () {
     }
 })
 
-    // article 4
-    let img4 = document.getElementById('img4')
+// article 4
+let img4 = document.getElementById('img4')
 
-    document.getElementById('cor4').addEventListener('click', function (){
-        img4.src = 'imgs/masculino/camisas/street/camisa04-branca.png'
-    })
-     
-    document.getElementById('cor04').addEventListener('click', function (){
-        img4.src = 'imgs/masculino/camisas/street/camisa04-preta.png'
-    })
-    
-    
-    
-    
-    // if (img.classList.contains("imgpreta")) {
-//     img.src = ("imgs/masculino/camisas/street/camisa01-branca-frente.png")
-//     img.classList.remove("imgpreta")
-//     img.classList.add("imgbranca")
+document.getElementById('cor4').addEventListener('click', function () {
+    img4.src = 'imgs/masculino/camisas/street/camisa04-branca.png'
+})
 
-// } else {
-//     img.src = ("imgs/masculino/camisas/street/camisa01-preta-frente.png")
-//     img.classList.remove("imgbranca")
-//     img.classList.add("imgpreta")
-// }
+document.getElementById('cor04').addEventListener('click', function () {
+    img4.src = 'imgs/masculino/camisas/street/camisa04-preta.png'
+})
 
+// segunda seção de articles 
+
+//  Article 1
+
+let imgA = document.getElementById('imgA1')
+let imgA1 = document.getElementById('imgA01')
+let imgA01 = document.getElementById('imgA001')
+
+document.getElementById('imgA01').addEventListener('click', function () {
+    if (imgA.classList.contains('preto')) {
+        if (imgA.classList.contains('verso')) {
+            imgA.classList.replace('verso', 'frente')
+            imgA.src = 'imgs/masculino/camisas/anime/anime01-black.png'
+        }
+    }
+    if (imgA.classList.contains('branco')) {
+        if (imgA.classList.contains('verso')) {
+            imgA.classList.replace('verso', 'frente')
+            imgA.src = 'imgs/masculino/camisas/anime/anime01-white.png'
+        }
+    }
+})
+
+document.getElementById('imgA001').addEventListener("click", function () {
+    if (imgA.classList.contains('preto')) {
+        if (imgA.classList.contains('frente')) {
+            imgA.classList.replace('frente', 'verso')
+            imgA.src = 'imgs/masculino/camisas/anime/anime01black.png'
+        }
+    }
+    if (imgA.classList.contains('branco')) {
+        if (imgA.classList.contains('frente')) {
+            imgA.classList.replace('frente', 'verso')
+            imgA.src = 'imgs/masculino/camisas/anime/anime01white.png'
+        }
+    }
+})
+
+document.getElementById('corA1').addEventListener('click', function () {
+    if (imgA.classList.contains('preto')) {
+        imgA.classList.replace('preto', 'branco')
+        imgA.src = 'imgs/masculino/camisas/anime/anime01white.png'
+        imgA1.src = 'imgs/masculino/camisas/anime/anime01-white.png'
+        imgA01.src = 'imgs/masculino/camisas/anime/anime01white.png'
+    }
+})
+
+document.getElementById('corA01').addEventListener('click', function () {
+    if (imgA.classList.contains('branco')) {
+        imgA.classList.replace('branco', 'preto')
+        imgA.src = 'imgs/masculino/camisas/anime/anime01black.png'
+        imgA1.src = 'imgs/masculino/camisas/anime/anime01-black.png'
+        imgA01.src = 'imgs/masculino/camisas/anime/anime01black.png'
+    }
+})
+
+// article 2
+
+
+let imgAA = document.getElementById('imgA2')
+let imgA2 = document.getElementById('imgA02')
+let imgA02 = document.getElementById('imgA002')
+
+document.getElementById('imgA02').addEventListener('click', function () {
+    if (imgAA.classList.contains('branco')) {
+        if (imgAA.classList.contains('verso')) {
+            imgAA.classList.replace('verso', 'frente')
+            imgAA.src = 'imgs/masculino/camisas/anime/anime02-white.png'
+        }
+    }
+    if (imgAA.classList.contains('preto')) {
+        if (imgAA.classList.contains('verso')) {
+            imgAA.classList.replace('verso', 'frente')
+            imgAA.src = 'imgs/masculino/camisas/anime/anime02-black.png'
+        }
+    }
+})
+document.getElementById('imgA002').addEventListener('click', function () {
+    if (imgAA.classList.contains('branco')) {
+        if (imgAA.classList.contains('frente')) {
+            imgAA.classList.replace('frente', 'verso')
+            imgAA.src = 'imgs/masculino/camisas/anime/anime02white.png'
+        }
+    }
+    if (imgAA.classList.contains('preto')) {
+        if (imgAA.classList.contains('frente')) {
+            imgAA.classList.replace('frente', 'verso')
+            imgAA.src = 'imgs/masculino/camisas/anime/anime02black.png'
+        }
+    }
+})
+document.getElementById('corA2').addEventListener('click', function () {
+    if (imgAA.classList.contains('preto')) {
+        imgAA.classList.replace('preto', 'branco')
+        imgAA.src = 'imgs/masculino/camisas/anime/anime02white.png'
+        imgA2.src = 'imgs/masculino/camisas/anime/anime02-white.png'
+        imgA02.src = 'imgs/masculino/camisas/anime/anime02white.png'
+    }
+})
+document.getElementById('corA02').addEventListener('click', function () {
+    if (imgAA.classList.contains('branco')) {
+        imgAA.classList.replace('branco', 'preto')
+        imgAA.src = 'imgs/masculino/camisas/anime/anime02black.png'
+        imgA2.src = 'imgs/masculino/camisas/anime/anime02-black.png'
+        imgA02.src = 'imgs/masculino/camisas/anime/anime02black.png'
+    }
+})
+
+// article 3
+
+let imgAAA = document.getElementById('imgA3')
+let imgA3 = document.getElementById('imgA03')
+let imgA03 = document.getElementById('imgA003')
+
+document.getElementById('imgA03').addEventListener('click', function () {
+    if (imgAAA.classList.contains('marrom')) {
+        if (imgAAA.classList.contains('verso')) {
+            imgAAA.classList.replace('verso', 'frente')
+            imgAAA.src = 'imgs/masculino/camisas/anime/anime03-brown.png'
+        }
+    }
+    if (imgAAA.classList.contains('branco')) {
+        if (imgAAA.classList.contains('verso')) {
+            imgAAA.classList.replace('verso', 'frente')
+            imgAAA.src = 'imgs/masculino/camisas/anime/anime03-white.png'
+        }
+    }
+})
+document.getElementById('imgA003').addEventListener('click', function () {
+    if (imgAAA.classList.contains('marrom')) {
+        if (imgAAA.classList.contains('frente')) {
+            imgAAA.classList.replace('frente', 'verso')
+            imgAAA.src = 'imgs/masculino/camisas/anime/anime03brown.png'
+        }
+    }
+    if (imgAAA.classList.contains('branco')) {
+        if (imgAAA.classList.contains('frente')) {
+            imgAAA.classList.replace('frente', 'verso')
+            imgAAA.src = 'imgs/masculino/camisas/anime/anime03white.png'
+        }
+    }
+})
+document.getElementById('corA3').addEventListener('click', function () {
+    if (imgAAA.classList.contains('branco')) {
+        imgAAA.classList.replace('branco', 'marrom')
+        imgAAA.src = 'imgs/masculino/camisas/anime/anime03brown.png'
+        imgA3.src = 'imgs/masculino/camisas/anime/anime03-brown.png'
+        imgA03.src = 'imgs/masculino/camisas/anime/anime03brown.png'
+    }
+})
+document.getElementById('corA03').addEventListener('click', function () {
+    if (imgAAA.classList.contains('marrom')) {
+        imgAAA.classList.replace('marrom', 'branco')
+        imgAAA.src = 'imgs/masculino/camisas/anime/anime03white.png'
+        imgA3.src = 'imgs/masculino/camisas/anime/anime03-white.png'
+        imgA03.src = 'imgs/masculino/camisas/anime/anime03white.png'
+    }
+})
