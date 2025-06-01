@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(177, 177, 177);
+    width: 100vw;
 }
 
 header {
@@ -15,18 +16,9 @@ header {
     background-color: rgb(161, 159, 159);
 }
 
-#titulo {
-    padding: 0;
-    margin: 10px 0px;
-    font-size: 20px;
-    font-weight: 750;
-    text-shadow: 0px 8px 15px black;
-}
 
-.texto {
-    text-align: center;
-    background-color: rgb(177, 177, 177);
-}
+
+/* parte da navegação "Menu" */
 
 #navegacao {
     position: sticky;
@@ -46,11 +38,27 @@ header {
     padding: 6px 15px;
 }
 
+#titulo {
+    padding: 0;
+    margin: 10px 0px;
+    font-size: 20px;
+    font-weight: 750;
+    text-shadow: 0px 8px 15px black;
+}
 
 .btns {
     margin-left: auto;
 
 }
+
+.texto {
+    text-align: center;
+    background-color: rgb(177, 177, 177);
+}
+
+
+
+
 
 .btn {
     padding: 7px 15px;
@@ -267,6 +275,41 @@ section {
 .img-kit {
     margin: auto;
 }
+
+/* final do site */
+
+footer {
+    margin: 10px;
+    text-align: center;
+    width: 100vw;
+}
+
+.social {
+    padding: 10px;
+    font-size: larger;
+}
+
+.fi {
+    margin: 10px;
+    color: black;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.helps{
+    border-top: 1px solid ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(128, 128, 128, 0.16);
+    border-bottom: 1px solid;
+}
+
+.copy{
+    margin-top: 40px;
+}
+
+
+/* animações personalizadas */
 
 @keyframes clicado {
     0% {
