@@ -58,7 +58,7 @@ header {
 }
 
 
-#search:focus{
+#search:focus {
     animation: busca-on 0.2s linear;
 }
 
@@ -68,14 +68,22 @@ header {
 
 }
 
+/* texto de boas vindas */
+
 .texto {
     text-align: center;
     background-color: rgb(177, 177, 177);
 }
 
 
+/* seção de kits */
 
+.kits {
+    justify-self: center;
+    align-content: center;
+    margin-bottom: 20px;
 
+}
 
 .btn {
     padding: 7px 15px;
@@ -193,12 +201,7 @@ section {
     text-align: center;
 }
 
-.kits {
-    justify-self: center;
-    align-content: center;
-    margin-bottom: 20px;
 
-}
 
 .btnsKit {
     display: flex;
@@ -331,32 +334,34 @@ footer {
 @keyframes busca-on {
     0% {
         transform: scaleX(0);
-       
+
     }
 
     50% {
         transform: scalex(0.5);
-        
+
     }
 
     100% {
         transform: scalex(1);
-        
+
     }
 }
 
 @keyframes busca-off {
     0% {
         transform: scalex(1);
-        
+
     }
-     50% {
+
+    50% {
         transform: scalex(0.5);
-        
+
     }
+
     100% {
         transform: scaleX(0);
-       
+
     }
 }
 
