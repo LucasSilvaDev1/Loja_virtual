@@ -39,7 +39,7 @@ header {
 
 #titulo {
     padding: 0;
-    margin: 10px 0px;
+    margin: 10px;
     font-size: 20px;
     font-weight: 750;
     text-shadow: 0px 8px 15px black;
@@ -47,15 +47,21 @@ header {
 
 #search {
     display: none;
-    margin-top: 6px;
-    margin-left: 14%;
+    margin: 4px auto;
     border-radius: 7px;
-    width: 30%;
+    width: 350px;
     padding: 10px;
     height: 10px;
     border: 0 none;
-    background-color: rgb(133, 131, 131);
+    background-color: rgb(160, 160, 160);
+    animation: busca-off 0.2s linear;
 }
+
+
+#search:focus{
+    animation: busca-on 0.2s linear;
+}
+
 
 .btns {
     margin-left: auto;
@@ -322,20 +328,35 @@ footer {
 
 /* animações personalizadas */
 
-@keyframes clicado {
+@keyframes busca-on {
     0% {
-        transform: scale(1);
-        box-shadow: -1px -1px 0px white;
+        transform: scaleX(0);
+       
     }
 
     50% {
-        transform: scale(0.9);
-        box-shadow: -1px -1px 10px white;
+        transform: scalex(0.5);
+        
     }
 
     100% {
-        transform: scale(1);
-        box-shadow: -1px -1px 20px white;
+        transform: scalex(1);
+        
+    }
+}
+
+@keyframes busca-off {
+    0% {
+        transform: scalex(1);
+        
+    }
+     50% {
+        transform: scalex(0.5);
+        
+    }
+    100% {
+        transform: scaleX(0);
+       
     }
 }
 
