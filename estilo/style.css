@@ -312,12 +312,51 @@ footer {
 .fi {
     margin: 10px;
     color: black;
-    font-size: 23px;
+    font-size: 25px;
     cursor: pointer;
 }
 
-.helps {
+.cadastramento{
     border-top: 1px solid;
+    background-color: rgba(128, 128, 128, 0.16);
+    margin-bottom:0px ;
+}
+
+.cadastramento > p {
+    margin: 0px;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.email > input {
+    background-color: rgb(160, 160, 160);
+    border: 1px solid;
+    outline: none;
+    height: 26.5px;
+    width: 200px;
+    margin: 5px;
+}
+
+
+.register, .login{
+    background-color: rgb(160, 160, 160);
+    border: 1px solid;
+    height: 30px;
+}
+
+.register:hover , .login:hover {
+    background-color: rgb(179, 179, 179);
+}
+
+
+
+.helps {
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: rgba(128, 128, 128, 0.16);
