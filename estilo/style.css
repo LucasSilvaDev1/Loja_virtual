@@ -86,7 +86,7 @@ header {
     display: none;
     grid-template-columns: 1fr 1fr;
     animation: menu linear 0.3s;
-    
+
 }
 
 .menuLateral {
@@ -99,7 +99,7 @@ header {
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(126, 125, 125);
-    padding: 15px 5px;
+    padding: 0px 5px;
 
 }
 
@@ -116,6 +116,50 @@ header {
     font-size: 20px;
     font-weight: 540;
     width: 50px;
+
+}
+
+.categorias {
+    margin: 0px 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loja>.subLoja {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+}
+
+.topLoja {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+.topLoja>p span {
+    margin: 0;
+    transition: linear 0.3s;
+}
+
+.subLoja {
+    padding: 3px 10px;
+    width: 170px;
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+
+#subLoja{
+    display: none;
+    animation: busca-on linear 0.2s;
+}
+
+.subLoja>p {
+    margin: 8px;
+    font-size: 14px;
 
 }
 
