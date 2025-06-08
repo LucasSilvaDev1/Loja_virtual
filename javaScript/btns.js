@@ -1,4 +1,6 @@
 
+// botão de busca
+
 const search = document.getElementById('search')
 
 const busca = document.getElementById('busca').addEventListener('click', function () {
@@ -21,5 +23,15 @@ search.addEventListener('blur', () => {
     }
 })
 
+// botão do menu lateral
 
+const menuLateral = document.getElementById('Menulateral')
 
+document.getElementById('fecharMenu').addEventListener('click', function () {
+    
+    menuLateral.style.display = 'none'
+})
+
+document.getElementById('openMenu').addEventListener('click', function () {
+    menuLateral.style.display = 'grid'
+})

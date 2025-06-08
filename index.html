@@ -15,12 +15,12 @@
 <body>
 
     <nav id="navegacao">
-        <button class="menu" onclick="addCategorias()">
+        <button class="menu" id="openMenu">
             <span class="material-symbols-outlined">
                 menu
             </span>
         </button>
-        <h1 id="titulo">street Style</h1>
+        <h1 class="ntitulo">street Style</h1>
 
         <div class="btns">
             <button class="btn">
@@ -47,6 +47,38 @@
         <p>Navegue por nosso vasto catalogo de roupas extremamente estilosas e fique estiloso!!!</p>
         <br>
     </section>
+
+    <!-- Menu lateral -->
+
+    <div class="divisorMenu aberto" id="Menulateral">
+        <div class="menuLateral">
+            <div class="mtitulo">
+                <h1>Street Style</h1>
+                <button id="fecharMenu">X</button>
+            </div>
+            <div class="categorias">
+                <div class="loja">
+                    <div class="topLoja">
+                        <p>Loja</p>
+                        <p>></p>
+                    </div>
+                    <div class="subLoja">
+                        <p>Camisas</p>
+                        <p>Kits completos</p>
+                        <p>Bermudas</p>
+                    </div>
+                </div>
+                <p>Promoções</p>
+                <p>Novidades</p>
+                <p>Tendencias</p>
+            </div>
+        </div>
+        <div class="Menudark">
+            
+        </div>
+    </div>
+
+    <!-- Seção de kit -->
 
     <main id="catalogo">
         <section class="kits">
