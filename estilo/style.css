@@ -231,7 +231,7 @@ header {
     flex-direction: row;
     justify-self: flex-end;
     overflow-x: auto;
-    width: 60%;
+    width: 95%;
     margin: 20px;
 }
 
@@ -244,10 +244,10 @@ img {
 
 .produto {
     display: flex;
-    margin: 0px 25px;
-    width: auto;
+    margin: 0px 5px;
+    width: 260px;
     height: 260px;
-    text-align: center;
+    align-items: center;
 
     background-color: rgb(154, 152, 152);
     color: black;
@@ -275,19 +275,20 @@ section {
 
 .sessao-CAM {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 .sessao-CAF {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 .description {
-    width: 40%;
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 0px;
     padding: 10px;
 }
 
@@ -460,7 +461,8 @@ footer {
 }
 
 .copy {
-    margin-top: 40px;
+    margin: 0px;
+    padding: 0px;
 }
 
 
