@@ -37,7 +37,7 @@ body {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     background-color:#00668c;
-    width: 100%;
+    width: 100vw;
 }
 
 .menu {
@@ -256,8 +256,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    overflow-x: auto;
-    width: 95%;
+    width: 95vw;
     margin: 2px;
 }
 
@@ -271,9 +270,9 @@ img {
 .produto {
     display: flex;
     justify-content: center;
-    margin: 5px 5px;
-    width: 260px;
-    height: 260px;
+    margin: 5px 0px;
+    width: 35%;
+    height: 240px;
     align-items: center;
     /* background-color: rgb(154, 152, 152); */
     color: black;
