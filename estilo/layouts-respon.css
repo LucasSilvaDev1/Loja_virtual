@@ -1,8 +1,23 @@
-@media (min-width: 340px) {
-
-
+@media (max-width: 335px) {
+#busca {
+    display: none;
+}
+#shoppingCart{
+    display: none;
 }
 
-@media (min-width:1025px) {
+.divCamisa{
+    grid-template-columns: 1fr;
+}
 
+.produto{
+    width: 20%;
+    /* height: 260px; */
+}
+}
+
+@media (min-width:850px) {
+    .divCamisa{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

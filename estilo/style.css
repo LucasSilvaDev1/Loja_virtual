@@ -33,10 +33,10 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
-    background-color:#00668c;
+    background-color: #00668c;
     width: 100vw;
 }
 
@@ -73,6 +73,7 @@ body {
 #search:focus {
     animation: busca-on 0.2s linear;
 }
+
 
 
 .btns {
@@ -169,7 +170,7 @@ body {
     border-radius: 10px;
 }
 
-#subLoja{
+#subLoja {
     display: none;
     animation: busca-on linear 0.2s;
 }
@@ -270,14 +271,20 @@ img {
 .produto {
     display: flex;
     justify-content: center;
-    margin: 5px 0px;
+    margin: 10px 0px;
     width: 35%;
     height: 240px;
     align-items: center;
     /* background-color: rgb(154, 152, 152); */
     color: black;
+    
 }
 
+/* .grid1{
+    border: solid 1px;
+    padding: 1px 5px;
+    
+} */
 
 .classificacao,
 .classificacao>p {
@@ -293,6 +300,7 @@ img {
     justify-content: space-around;
     font-family: sans-serif;
 }
+
 /* 
 section {
     background-color: rgb(177, 177, 177);
@@ -311,15 +319,18 @@ section {
     align-items: center;
 }
 
-.description {
-    text-align: justify;
-    margin-top: 0px;
-    padding: 10px;
+.description-1{
+    text-align: center;
+    margin: 10px;
 }
 
-.description>h2 {
+/* .description-2 {
     text-align: center;
-}
+    padding: 5px;
+    color: white;
+    background-color: #71c4ef;
+    border-radius: 0px 0px 15px 15px;
+} */
 
 
 
