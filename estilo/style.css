@@ -263,34 +263,43 @@ body {
 
 img {
     background-size: cover;
-    height: 200px;
-    transition: linear 0.5s;
+    height: 220px;
 }
 
 
 .produto {
     display: flex;
     justify-content: center;
+    text-align: center;
     margin: 10px 0px;
-    width: 35%;
-    height: 240px;
+    width: 190px;
+    height: 280px;
+    border-radius: 30px;
+    border: 1px solid #00668c;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.445);
     align-items: center;
-    /* background-color: rgb(154, 152, 152); */
-    color: black;
+    color: rgb(0, 0, 0);
     
 }
 
-/* .grid1{
-    border: solid 1px;
-    padding: 1px 5px;
+.grid1{
+    padding: 0px;
+    margin: 0px;
     
-} */
+}
 
 .classificacao,
 .classificacao>p {
-    margin: 2px 0px;
+    margin: 0px 0px;
     display: flex;
     justify-content: center;
+    color: goldenrod;
+}
+
+.descrissao, .classificacao{
+    background-color: #00668c;
+    height: 28px;
+    width: 191px;
 }
 
 .descrissao,
@@ -299,6 +308,8 @@ img {
     display: flex;
     justify-content: space-around;
     font-family: sans-serif;
+    border-radius:0px 0px 30px 30px;
+    color: white;
 }
 
 /* 
