@@ -1,23 +1,80 @@
 @media (max-width: 335px) {
-#busca {
-    display: none;
-}
-#shoppingCart{
-    display: none;
+    #busca {
+        display: none;
+    }
+
+    #shoppingCart {
+        display: none;
+    }
+
+    .divCamisa {
+        grid-template-columns: 1fr;
+    }
+
+    /* .produto {
+        
+        /* height: 260px; */
 }
 
-.divCamisa{
-    grid-template-columns: 1fr;
+@media (min-width:335px){
+    img{
+        height: 180px;
+    }
+
+    .produto{
+        height: 240px;
+        width: 150px;
+    }
+
+    .descrissao, .classificacao{
+    height: 28px;
+    width: 151px;
+    font-size: smaller;
+    }
 }
 
-.produto{
-    width: 20%;
-    /* height: 260px; */
-}
+@media (min-width:400px){
+    img{
+        height: 200px;
+    }
+
+    .produto{
+        height: 260px;
+        width: 180px;
+    }
+
+    .descrissao, .classificacao{
+    height: 28px;
+    width: 181px;
+    }
 }
 
-@media (min-width:850px) {
-    .divCamisa{
+@media (min-width:750px) {
+    .divCamisa {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width:1000px){
+    .camisas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .divCamisa{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sessao-CAM{
+        border-radius: 25px;
+        margin: 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.281);
+
+    }
+
+    .sessao-CAF{
+        border-radius: 25px;
+        margin: 10px;
+        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.281);
     }
 }

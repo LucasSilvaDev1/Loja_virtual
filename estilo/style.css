@@ -29,7 +29,10 @@ body {
 /* parte da navegação "Menu" */
 
 #navegacao {
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -37,7 +40,7 @@ body {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     background-color: #00668c;
-    width: 100vw;
+    width: 100%;
 }
 
 .menu {
@@ -59,7 +62,11 @@ body {
 
 #search {
     display: none;
-    margin: 4px auto;
+    position: fixed;
+    top: 60px;
+    left: 22%;
+    margin:4px auto;
+    z-index: 150;
     border-radius: 7px;
     width: 350px;
     padding: 10px;
@@ -84,6 +91,7 @@ body {
 /* texto de boas vindas */
 
 .texto {
+    margin-top: 100px;
     text-align: center;
     /* background-color: rgb(177, 177, 177); */
 }
@@ -107,14 +115,14 @@ body {
 .menuLateral {
     background-color: #f5f4f1;
     width: 300px;
-    z-index: 3;
+    z-index: 100;
 }
 
 .mtitulo {
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(10, 6, 6);
-    padding: 0px 5px;
+    padding: 4px 5px;
     background-color: #00668c;
     color: #f5f4f1;
 }
@@ -257,7 +265,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    width: 95vw;
+    width: 100%;
     margin: 2px;
 }
 
@@ -276,16 +284,21 @@ img {
     height: 280px;
     border-radius: 30px;
     border: 1px solid #00668c;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.445);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.749);
     align-items: center;
     color: rgb(0, 0, 0);
-    
+    transition: linear 0.3s;
 }
 
-.grid1{
+.produto:hover{
+    transform: scale(1.02);
+    transition: linear 0.3s;
+}
+
+.grid1 {
     padding: 0px;
     margin: 0px;
-    
+
 }
 
 .classificacao,
@@ -296,7 +309,8 @@ img {
     color: goldenrod;
 }
 
-.descrissao, .classificacao{
+.descrissao,
+.classificacao {
     background-color: #00668c;
     height: 28px;
     width: 191px;
@@ -308,7 +322,7 @@ img {
     display: flex;
     justify-content: space-around;
     font-family: sans-serif;
-    border-radius:0px 0px 30px 30px;
+    border-radius: 0px 0px 30px 30px;
     color: white;
 }
 
@@ -321,6 +335,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 25px;
+    margin: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.63);
 
 }
 
@@ -328,9 +345,12 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 25px;
+    margin: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.63);
 }
 
-.description-1{
+.description-1 {
     text-align: center;
     margin: 10px;
 }
