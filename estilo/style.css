@@ -17,6 +17,7 @@ dimensao do poco x6 pro: 446
 
 
 body {
+    box-sizing: border-box;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f4f1;
@@ -30,7 +31,7 @@ body {
 
 #navegacao {
     position: fixed;
-    top: 0;
+    top: -1px;
     left: 0;
     z-index: 1;
     display: flex;
@@ -60,12 +61,17 @@ body {
     text-shadow: 0px 8px 15px black;
 }
 
+.pesquisar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #search {
-    display: none;
+    display: block;
     position: fixed;
     top: 60px;
-    left: 22%;
-    margin:4px auto;
+    margin: 4px auto;
     z-index: 150;
     border-radius: 7px;
     width: 350px;
@@ -195,16 +201,6 @@ body {
     z-index: 2;
 }
 
-
-/* seção de kits */
-
-.kits {
-    justify-self: center;
-    align-content: center;
-    margin-bottom: 20px;
-
-}
-
 .btn {
     padding: 7px 15px;
     margin: 0;
@@ -214,11 +210,12 @@ body {
     color: #f5f4f1;
 }
 
-/* .btn:hover,
+
+.btn:hover,
 .menu:hover {
-    background-color: rgb(181, 181, 181);
-    box-shadow: 0px 0px 10px rgb(181, 181, 181);
-} */
+    transform: scale(1.1);
+    text-shadow:1px 1px 15px #cccbc8;
+}
 
 /* .grid2{
     height: 100%;
@@ -290,7 +287,7 @@ img {
     transition: linear 0.3s;
 }
 
-.produto:hover{
+.produto:hover {
     transform: scale(1.02);
     transition: linear 0.3s;
 }

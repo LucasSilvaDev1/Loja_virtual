@@ -13,7 +13,7 @@ const busca = document.getElementById('busca').addEventListener('click', functio
 search.addEventListener('focus', () => {
     if (search.classList.contains('off')) {
         search.classList.replace('off', 'on')
-        search.style.display = 'block'
+        search.style.display = 'flex'
     }
 })
 search.addEventListener('blur', () => {
