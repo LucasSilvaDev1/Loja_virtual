@@ -42,33 +42,41 @@ body {
     border-bottom: 1px solid gray;
     background-color: #00668c;
     width: 100%;
+    padding:0px;
+    
 }
 
 .menu {
     justify-self: center;
     background-color: transparent;
     border: none;
-    padding: 6px 15px;
+    padding: 15px 15px;
     color: #f5f4f1;
+}
+
+.Ntitulo{
+    margin: 0 auto;
 }
 
 .ntitulo {
     color: #f5f4f1;
+    margin: 0;
     padding: 0;
     text-align: justify;
-    font-size: 20px;
-    font-weight: 750;
-    text-shadow: 0px 8px 15px black;
+    font-size: 25px;
+    font-weight: 1000;
+    text-shadow: 0px 8px 15px rgb(0, 0, 0);
 }
 
 .pesquisar {
     width: 100%;
     display: flex;
     justify-content: center;
+    visibility: hidden;
 }
 
 #search {
-    display: block;
+    display: none;
     position: fixed;
     top: 60px;
     margin: 4px auto;
@@ -85,13 +93,6 @@ body {
 
 #search:focus {
     animation: busca-on 0.2s linear;
-}
-
-
-
-.btns {
-    margin-left: auto;
-
 }
 
 /* texto de boas vindas */
@@ -214,7 +215,7 @@ body {
 .btn:hover,
 .menu:hover {
     transform: scale(1.1);
-    text-shadow:1px 1px 15px #cccbc8;
+    text-shadow: 1px 1px 15px #cccbc8;
 }
 
 /* .grid2{
@@ -266,7 +267,7 @@ body {
     margin: 2px;
 }
 
-img {
+article > img {
     background-size: cover;
     height: 220px;
 }

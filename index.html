@@ -22,15 +22,15 @@
                 </span>
             </button>
         </div>
-        <div>
+        <div class="Ntitulo">
             <h1 class="ntitulo">street Style</h1>
         </div>
 
         <div class="btns">
-            <button class="btn">
-                <span id="busca" class="material-symbols-outlined search">
+            <button class="btn" id="busca">
+                <a class="material-symbols-outlined search">
                     search
-                </span>
+                </a>
             </button>
             <button class="btn" id="shoppingCart">
                 <span class="material-symbols-outlined cart">
@@ -45,7 +45,7 @@
         </div>
     </nav>
 
-    <div class="pesquisar"><input id="search" class="off" type="text"></div>
+    <div class="pesquisar" id="pesquisa"><input id="search" class="off" type="text"></div>
 
     <section class="texto">
         <h2>Bem vindo a Street Style</h2>
@@ -106,7 +106,8 @@
                 </div>
                 <section class="divCamisa">
                     <!--article 1-->
-                    <article class="camisa-masculina produto" id="c1" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-masculina produto" id="c1" onmouseover="mudarCamisa(id)" 
+                        onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imgc1" src="imgs/masculino/camisas/c1-f.png" alt="">
                             <div class="classificacao">
@@ -120,7 +121,7 @@
                         </div>
                     </article>
                     <!--article 2-->
-                    <article class="camisa-masculina produto" id="c2" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-masculina produto" id="c2" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imgc2" src="imgs/masculino/camisas/c2-f.png" alt="">
                             <div class="classificacao">
@@ -134,7 +135,7 @@
                         </div>
                     </article>
                     <!--article 3-->
-                    <article class="camisa-masculina produto" id="c3" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-masculina produto" id="c3" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img class="vermelho frente" id="imgc3" src="imgs/masculino/camisas/c3-f.png"
                                 alt="camisa street coração roxo">
@@ -149,7 +150,7 @@
                         </div>
                     </article>
                     <!--article 4-->
-                    <article class="camisa-masculina produto" id="c4" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-masculina produto" id="c4" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imgc4" src="imgs/masculino/camisas/c4-f.png" alt="camisa street NY">
                             <div class="classificacao">
@@ -163,7 +164,7 @@
                         </div>
                     </article>
                     <!-- article 5 -->
-                    <article class="camisa-masculina produto" id="c5" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-masculina produto" id="c5" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imgc5" class="vermelho frente" src="imgs/masculino/camisas/c5-f.png"
                                 alt="camisa street coração roxo">
@@ -178,10 +179,9 @@
                         </div>
                     </article>
                     <!-- article 6 -->
-                    <article class="camisa-masculina produto" id="c6" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-masculina produto" id="c6" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imgc6" src="imgs/masculino/camisas/c6-f.png"
-                                alt="">
+                            <img id="imgc6" src="imgs/masculino/camisas/c6-f.png" alt="">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
                                 <p style="font-size: x-small;">131</p>
@@ -205,7 +205,7 @@
                 </div>
                 <section class="divCamisa">
                     <!--Article 1-->
-                    <article class="camisa-anime produto" id="a1" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-anime produto" id="a1" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imga1" src="imgs/masculino/camisas/a1-v.png" alt="" class="preto verso">
                             <div class="classificacao">
@@ -218,7 +218,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="camisa-anime produto" id="a2" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-anime produto" id="a2" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imga2" class="verso branco" src="imgs/masculino/camisas/a2-f.png"
                                 alt="overSize california">
@@ -232,7 +232,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="camisa-anime produto" id="a3" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-anime produto" id="a3" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imga3" class="verso marrom" src="imgs/masculino/camisas/a3-f.png"
                                 alt="OverSize marge's">
@@ -246,7 +246,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="camisa-anime produto" id="a4" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-anime produto" id="a4" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imga4" class="verso preto" src="imgs/masculino/camisas/a4-f.png"
                                 alt="OverSize Traktor">
@@ -260,10 +260,9 @@
                             </div>
                         </div>
                     </article>
-                    <article class="camisa-anime produto" id="a5" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-anime produto" id="a5" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imga5" src="imgs/masculino/camisas/a5-f.png"
-                                alt="">
+                            <img id="imga5" src="imgs/masculino/camisas/a5-f.png" alt="">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
                                 <p style="font-size: x-small;">142</p>
@@ -274,7 +273,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="camisa-anime produto" id="a6" onmouseover="mudarCamisa(id)">
+                    <article class="camisa-anime produto" id="a6" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
                             <img id="imga6" class="verso preto" src="imgs/masculino/camisas/a6-f.png"
                                 alt="overSize luffy">
@@ -293,10 +292,7 @@
                 </section>
             </div>
         </div>
-
     </main>
-    <br>
-    <br>
     <footer>
         <div>
             <h1>Street Style</h1>
