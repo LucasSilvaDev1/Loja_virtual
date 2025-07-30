@@ -71,3 +71,21 @@ function buyPage(id) {
     window.location.href = 'pags/pagCompra.html'
 
 }
+
+// mudar camisas na segunda pagina
+
+
+function mudarcamisa() {
+    const img = document.getElementById("imgBuy1")
+    const img2 = document.getElementById('imgBuy')
+    const camisa = window.localStorage.getItem('camisa')
+    if (img.classList.contains('v')) {
+        img.classList.replace("v", "f")
+        img.src = '../imgs/masculino/camisas/' + camisa + '-v.png'
+        img2.src = '../imgs/masculino/camisas/' + camisa + '-f.png'
+    } else if (img.classList.contains('f')){
+        img.classList.replace('f','v')
+        img.src = '../imgs/masculino/camisas/' + camisa + '-f.png'
+        img2.src = '../imgs/masculino/camisas/' + camisa + '-v.png'
+    }
+}

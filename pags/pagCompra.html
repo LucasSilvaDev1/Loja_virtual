@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo/style2.css">
     <link rel="stylesheet" href="../estilo/style.css">
+    <link rel="stylesheet" href="../estilo/style2.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=0" />
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
@@ -97,29 +97,106 @@
     </div>
 
     <main class="mainPgBuy">
-        <div class="btnReturn">
-            <button class="btReturn">
-                <a class="material-symbols-outlined" href="../index.html">
-                    reply
-                </a>
-            </button>
-        </div>
+
 
         <div class="divImgBuy">
-            <div class="divImg1"><img id="imgBuy" src="" alt=""></div>
-            <div class="divImg2"><img id="imgBuy1" src="" alt=""></div>
+            <div class="divImg1">
+                <div class="btnReturn">
+                    <button class="btReturn">
+                        <a class="material-symbols-outlined" href="../index.html">
+                            reply
+                        </a>
+                    </button>
+                </div>
+                <img id="imgBuy" src="" alt="">
+            </div>
+            <div class="divImg2">
+                <img class="v" id="imgBuy1" src="" alt="" onclick="mudarcamisa()">
+                <div class="sizeShirt">
+                    <p>tamanhos disponiveis</p>
+                    <div class="btnsSize">
+                        <button class="btnSize">P</button>
+                        <button class="btnSize">M</button>
+                        <button class="btnSize">G</button>
+                        <button class="btnSize">GG</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="descrissao2">
-            <div class="classificacao2">
-                <p>4.5★★★★☆</p>
-                <p style="font-size: x-small;">142</p>
-            </div>
             <div class="valor">
                 <p>R$ 69,99</p>
                 <p style="text-decoration: line-through;">R$ 89,99</p>
             </div>
+            <div class="classificacao2">
+                <p>4.5★★★★☆</p>
+                <p style="font-size: x-small;">142</p>
+            </div>
         </div>
     </main>
+        <footer>
+        <div>
+            <h1>Street Style</h1>
+            <p>moda street masculina para diferentes gostos e ocasiões!!</p>
+        </div>
+        <p>Siga-nos em nossas redes sociais!! </p>
+        <div class="social">
+            <i class="fi fi-brands-instagram"></i>
+            <i class="fi fi-brands-facebook"></i>
+            <i class="fi fi-brands-whatsapp"></i>
+            <i class="fi fi-brands-tik-tok"></i>
+        </div>
+        <div class="cadastramento">
+            <h4>
+                Cadastre-se em nosso site para receber as promoções de primeira mão
+            </h4>
+            <div class="email">
+                <input type="email" placeholder="exemplo@gmail.com">
+                <button class="register">
+                    register
+                </button>
+            </div>
+            <p> ja é nosso cliente? <button class="login">Login</button></p>
+        </div>
+        <div class="helps">
+            <div class="questions">
+                <h3>EMPRESA</h3>
+                <p>Sobre<br>
+                    Caracteristicas<br>
+                    Funcionários<br>
+                    Carreira
+                </p>
+            </div>
+
+            <div class="questions">
+                <h3>AJUDA</h3>
+                <p>Suporte ao Cliente <br>
+                    Detalhes da Entrega <br>
+                    Termos e Condições <br>
+                    Política de Privacidade</p>
+            </div>
+
+            <div class="questions">
+                <h3>PERGUNTAS FREQUENTES</h3>
+                <p>Conta <br>
+                    Gerenciar entregas <br>
+                    Pedidos <br>
+                    Pagamento</p>
+            </div>
+
+            <div class="questions">
+                <h3>RECURSOS</h3>
+                <p>Afiliação <br>
+                    E-book de vendas <br>
+                    Tutorial de cadastramento <br>
+                    Filiais</p>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>STREET STYLE © 2025, Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
     <script src="/javaScript/btns.js">
     </script>
