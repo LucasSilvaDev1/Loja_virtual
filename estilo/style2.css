@@ -1,3 +1,5 @@
+/* CONTEUDO PRINCIPAL "MAIN" */
+
 .mainPgBuy {
     background-color: #f5f4f1;
     margin: 70px 10px 0px 10px;
@@ -9,6 +11,8 @@
     justify-content: space-around;
 
 }
+
+/* BOTAO RETURN "VOLTA PARA A PAGINA PRINCIPAL" */
 
 .btnReturn {
     display: flex;
@@ -27,12 +31,14 @@
     text-decoration: none;
 }
 
-.btReturn>a{
+.btReturn>a {
     font-size: 30px;
     text-decoration: none;
     color: #00668c;
     text-shadow: 0px 0px 15px black;
 }
+
+/* IMAGENS DAS CAMISAS "CAMISA DE FRENTE E VERSO" */
 
 .divImgBuy {
     background-size: contain;
@@ -53,13 +59,13 @@
     border: 1px solid #00668c;
 }
 
-.divImg2{
+.divImg2 {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.divImg2>img:hover{
+.divImg2>img:hover {
     transform: scale(1.05);
 }
 
@@ -72,18 +78,21 @@
     border: 1px solid #00668c;
 }
 
-.btnsSize{
+/* BOTOES DOS TAMANHOS E QUANTIDADE */
+
+.btnsSize {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.sizeShirt>p{
+.sizeShirt>p {
     text-align: justify;
-    font-size:  smaller;
+    font-size: smaller;
     font-weight: 700;
+    margin: 5px;
 }
 
-.btnSize{
+.btnSize {
     background-color: #00668c;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.982);
     text-decoration: none;
@@ -92,12 +101,89 @@
     color: #f5f4f1;
     margin: 5px;
     padding: 6px;
+    font-weight: 550;
 }
 
-.btnSize:hover{
+.btnSize:hover {
     background-color: #327e9a;
+    transition: linear 0.2s;
     transform: scale(1.1);
 }
+
+.quantidade {
+    display: flex;
+    flex-direction: column;
+    height: 35px;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.quantidade>p {
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.btnsQuanti {
+    display: flex;
+}
+
+#btReduce,
+#btAdd {
+    height: 30px;
+    grid-template-columns: 1fr;
+    background-color: #00668c;
+    color: #f5f4f1;
+}
+
+#NumInput {
+    text-align: end;
+    height: 25px;
+    width: 15px;
+
+    
+}
+
+/* BOTÃO DO CARRINHO DE COMPRA */
+
+.btCart {
+    background-color: #00668c;
+    color: #f5f4f1;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 25px;
+    border: 2px solid #f5f4f1;
+    margin: 0px 32.8px;
+    width: 39.2px;
+}
+
+.btCart>p {
+    display: none;
+    height: 20px;
+    margin: 0;
+    padding: 5px;
+    transition: linear 0.5s;
+}
+
+    .btCart:hover{
+        background-color: #327e9a;
+        width: 105px;
+        margin: 0;
+        transition: linear 0.2s;
+    }
+
+.btCart:hover>p {
+    
+    animation: btnCart linear 0.2s;
+    display: block;
+}
+
+/* DESCRIÇÃO DO PRODUTO */
 
 .descrissao2 {
     height: 30px;
@@ -114,7 +200,14 @@
     margin: 0;
     padding: 0;
     display: flex;
+    color: rgb(0, 0, 0);
+    font-size: smaller;
+    font-weight: 700;
+}
+
+.nota {
     color: goldenrod;
+    -webkit-text-stroke: 0.1px black;
 }
 
 .valor,
@@ -125,4 +218,18 @@
     justify-content: space-around;
     color: white;
     /* border: 1px solid; */
+}
+
+@keyframes btnCart{
+    0% {
+        transform: scaleX(0.5);
+    }
+
+    50%{
+        transform: scaleX(0.7.5);
+    }
+
+    100%{
+        transform: scaleX(1);
+    }
 }
