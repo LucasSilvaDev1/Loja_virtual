@@ -42,8 +42,8 @@ body {
     border-bottom: 1px solid gray;
     background-color: #00668c;
     width: 100%;
-    padding:0px;
-    
+    padding: 0px;
+
 }
 
 .menu {
@@ -54,7 +54,7 @@ body {
     color: #f5f4f1;
 }
 
-.Ntitulo{
+.Ntitulo {
     margin: 0 auto;
 }
 
@@ -122,7 +122,7 @@ body {
 .menuLateral {
     background-color: #f5f4f1;
     width: 300px;
-    z-index: 100;
+    z-index: 5;
 }
 
 .mtitulo {
@@ -151,6 +151,7 @@ body {
 }
 
 .categorias {
+    z-index: 2;
     margin: 0px 15px;
     font-family: sans-serif;
     font-weight: 400;
@@ -159,7 +160,13 @@ body {
     flex-direction: column;
 }
 
+.loja{
+    z-index: 2;
+      background-color: #f5f4f1;
+}
+
 .loja>.subLoja {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-self: end;
@@ -267,7 +274,7 @@ body {
     margin: 2px;
 }
 
-article > img {
+article>img {
     background-size: cover;
     height: 220px;
 }

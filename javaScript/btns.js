@@ -53,11 +53,11 @@ document.getElementById('btnLoja').addEventListener('click', function () {
         subLoja.style.display = 'none'
         seta.style.transform = 'rotate(360deg)'
         btnLoja.classList.replace('aberto', 'fechado')
+
     } else if (btnLoja.classList.contains('fechado')) {
         subLoja.style.display = 'flex'
         seta.style.transform = 'rotate(180deg)'
         btnLoja.classList.replace('fechado', 'aberto')
-
     }
 })
 
@@ -83,9 +83,30 @@ function mudarcamisa() {
         img.classList.replace("v", "f")
         img.src = '../imgs/masculino/camisas/' + camisa + '-v.png'
         img2.src = '../imgs/masculino/camisas/' + camisa + '-f.png'
-    } else if (img.classList.contains('f')){
-        img.classList.replace('f','v')
+    } else if (img.classList.contains('f')) {
+        img.classList.replace('f', 'v')
         img.src = '../imgs/masculino/camisas/' + camisa + '-f.png'
         img2.src = '../imgs/masculino/camisas/' + camisa + '-v.png'
     }
 }
+
+// mudar quantidade 
+
+const inputQuant = document.getElementById('NumInput')
+let valor = Number(inputQuant.placeholder)
+
+
+document.getElementById('btReduce').addEventListener("click", function () {
+    if (inputQuant.placeholder > 1) {
+        valor--
+        inputQuant.placeholder = valor
+    }
+    console.log(valor)
+})
+document.getElementById('btAdd').addEventListener('click', function () {
+    if (inputQuant.placeholder < 100) {
+        valor++
+        inputQuant.placeholder = valor
+    }
+    console.log(valor)
+})

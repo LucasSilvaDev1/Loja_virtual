@@ -95,26 +95,22 @@
 
         </div>
     </div>
-
+    <!-- Imagens do pedido selecionado -->
     <main class="mainPgBuy">
 
 
         <div class="divImgBuy">
             <div class="divImg1">
-                <div class="btnReturn">
-                    <button class="btReturn">
-                        <a class="material-symbols-outlined" href="../index.html">
-                            reply
-                        </a>
-                    </button>
-                </div>
+                <a href="../index.html" style="font: 40px;" class="material-symbols-outlined seta">undo</a>
                 <img id="imgBuy" src="" alt="">
             </div>
             <div class="divImg2">
                 <img class="v" id="imgBuy1" src="" alt="" onclick="mudarcamisa()">
+
                 <div class="sizeShirt">
                     <p>tamanhos disponiveis</p>
-                    <div class="btnsSize">
+                    <div class="btnsSize" id="btnssize">
+
                         <button class="btnSize">P</button>
                         <button class="btnSize">M</button>
                         <button class="btnSize">G</button>
@@ -125,7 +121,7 @@
                         <p>quantidade</p>
                         <div class="btnsQuanti">
                             <button id="btReduce">-</button>
-                            <input type="number" id="NumInput" readonly placeholder="0">
+                            <input type="number" id="NumInput" readonly placeholder="1">
                             <button id="btAdd">+</button>
                         </div>
                         <div class="classificacao2">
@@ -153,6 +149,13 @@
 
         </div>
     </main>
+
+    <!-- Recomendações -->
+
+    <section class="Recomendações" id="Reco">
+
+
+    </section>
     <footer>
         <div>
             <h1>Street Style</h1>
