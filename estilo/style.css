@@ -275,7 +275,7 @@ body {
 }
 
 article>img {
-    background-size: cover;
+    background-size: contain;
     height: 220px;
 }
 

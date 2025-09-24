@@ -22,6 +22,7 @@
     padding: 5px;
     font: 40px;
     top: 80px;
+    z-index: 1;
 }
 
 /* IMAGENS DAS CAMISAS "CAMISA DE FRENTE E VERSO" */
@@ -221,6 +222,22 @@
     justify-content: space-around;
     color: white;
     /* border: 1px solid; */
+}
+
+/* Recomendações */
+
+.Recomendações{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produto{
+    margin: 5px;
+}
+
+.grid1>img{
+    width: 165px;
 }
 
 @keyframes btnCart {

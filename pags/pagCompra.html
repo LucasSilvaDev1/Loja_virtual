@@ -18,6 +18,8 @@
             const camisa = localStorage.getItem('camisa')
             imgPG.src = '../imgs/masculino/camisas/' + camisa + '-f.png'
             imgPG1.src = '../imgs/masculino/camisas/' + camisa + '-v.png'
+
+            sugestoes()
         })
     </script>
 </head>
@@ -95,67 +97,69 @@
 
         </div>
     </div>
-    <!-- Imagens do pedido selecionado -->
-    <main class="mainPgBuy">
 
+    <main>
+        <!-- Imagens do pedido selecionado -->
 
-        <div class="divImgBuy">
-            <div class="divImg1">
-                <a href="../index.html" style="font: 40px;" class="material-symbols-outlined seta">undo</a>
-                <img id="imgBuy" src="" alt="">
-            </div>
-            <div class="divImg2">
-                <img class="v" id="imgBuy1" src="" alt="" onclick="mudarcamisa()">
-
-                <div class="sizeShirt">
-                    <p>tamanhos disponiveis</p>
-                    <div class="btnsSize" id="btnssize">
-
-                        <button class="btnSize">P</button>
-                        <button class="btnSize">M</button>
-                        <button class="btnSize">G</button>
-                        <button class="btnSize">GG</button>
-                    </div>
-
-                    <div class="quantidade">
-                        <p>quantidade</p>
-                        <div class="btnsQuanti">
-                            <button id="btReduce">-</button>
-                            <input type="number" id="NumInput" readonly placeholder="1">
-                            <button id="btAdd">+</button>
+        <div class="mainPgBuy">
+            <div class="divImgBuy">
+                <div class="divImg1">
+                    <a href="../index.html" style="font: 40px;" class="material-symbols-outlined seta">undo</a>
+                    <img id="imgBuy" src="" alt="">
+                </div>
+                <div class="divImg2">
+                    <img class="v" id="imgBuy1" src="" alt="" onclick="mudarcamisa()">
+                    <div class="sizeShirt">
+                        <p>tamanhos disponiveis</p>
+                        <div class="btnsSize" id="btnssize">
+                            <button class="btnSize">P</button>
+                            <button class="btnSize">M</button>
+                            <button class="btnSize">G</button>
+                            <button class="btnSize">GG</button>
                         </div>
-                        <div class="classificacao2">
-                            <p>4.5</p>
-                            <p class="nota">★★★★☆</p>
-                            <p style="font-size: x-small;">142</p>
+                        <div class="quantidade">
+                            <p>quantidade</p>
+                            <div class="btnsQuanti">
+                                <button id="btReduce">-</button>
+                                <input type="number" id="NumInput" readonly placeholder="1">
+                                <button id="btAdd">+</button>
+                            </div>
+                            <div class="classificacao2">
+                                <p>4.5</p>
+                                <p class="nota">★★★★☆</p>
+                                <p style="font-size: x-small;">142</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="descrissao2">
+                <div class="valor">
+                    <p>R$ 69,99</p>
+                    <p style="text-decoration: line-through;">R$ 89,99</p>
+                </div>
+                <div class="carrinho">
+                    <button class="btCart">
+                        <p>Adicionar</p>
+                        <span class="material-symbols-outlined cart">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="descrissao2">
-            <div class="valor">
-                <p>R$ 69,99</p>
-                <p style="text-decoration: line-through;">R$ 89,99</p>
-            </div>
-            <div class="carrinho">
-                <button class="btCart">
-                    <p>Adicionar</p>
-                    <span class="material-symbols-outlined cart">
-                        shopping_cart
-                    </span>
-                </button>
-            </div>
 
-        </div>
+
+        <!-- Recomendações -->
+
+        <section class="Recomendações" id="Reco">
+
+ 
+
+        </section>
+
     </main>
 
-    <!-- Recomendações -->
-
-    <section class="Recomendações" id="Reco">
-
-
-    </section>
     <footer>
         <div>
             <h1>Street Style</h1>

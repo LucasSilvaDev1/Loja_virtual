@@ -110,3 +110,80 @@ document.getElementById('btAdd').addEventListener('click', function () {
     }
     console.log(valor)
 })
+
+// mudar conteudo recomendado na pagina de compra 
+
+function sugestoes() {
+
+    let reco = document.getElementById("Reco")
+    let Numeros = [1, 2, 3, 4, 5, 6]
+
+    Numeros.sort(() => Math.random() - 0.5)
+    reco.innerHTML = `
+        <article class="camisa-anime produto" id = "a4" >
+            <div class="grid1">
+                <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[0]}-v.png" alt="OverSize Traktor">
+                    <div class="classificacao">
+                        <p>4.5★★★★☆</p>
+                        <p style="font-size: x-small;">142</p>
+                    </div>
+                    <div class="descrissao">
+                        <p>R$ 69,99</p>
+                        <p style="text-decoration: line-through;">R$ 89,99</p>
+                    </div>
+            </div>
+            </article >
+            <article class="camisa-anime produto" id="a4">
+                <div class="grid1">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[1]}-v.png" alt="OverSize Traktor">
+                    <div class="classificacao">
+                        <p>4.5★★★★☆</p>
+                        <p style="font-size: x-small;">142</p>
+                    </div>
+                    <div class="descrissao">
+                        <p>R$ 69,99</p>
+                        <p style="text-decoration: line-through;">R$ 89,99</p>
+                    </div>
+                </div>
+            </article>
+            <article class="camisa-anime produto" id="a4">
+                <div class="grid1">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[2]}-v.png" alt="OverSize Traktor">
+                    <div class="classificacao">
+                        <p>4.5★★★★☆</p>
+                        <p style="font-size: x-small;">142</p>
+                    </div>
+                    <div class="descrissao">
+                        <p>R$ 69,99</p>
+                        <p style="text-decoration: line-through;">R$ 89,99</p>
+                    </div>
+                </div>
+            </article>
+            <article class="camisa-anime produto" id="a4">
+                <div class="grid1">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[3]}-v.png" alt="OverSize Traktor">
+                    <div class="classificacao">
+                        <p>4.5★★★★☆</p>
+                        <p style="font-size: x-small;">142</p>
+                    </div>
+                    <div class="descrissao">
+                        <p>R$ 69,99</p>
+                        <p style="text-decoration: line-through;">R$ 89,99</p>
+                    </div>
+                </div>
+            </article>
+            <article class="camisa-anime produto" id="a4">
+                <div class="grid1">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[4]}-v.png" alt="OverSize Traktor">
+                    <div class="classificacao">
+                        <p>4.5★★★★☆</p>
+                        <p style="font-size: x-small;">142</p>
+                    </div>
+                    <div class="descrissao">
+                        <p>R$ 69,99</p>
+                        <p style="text-decoration: line-through;">R$ 89,99</p>
+                    </div>
+                </div>
+            </article>
+    `
+}
