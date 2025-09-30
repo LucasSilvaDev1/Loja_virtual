@@ -65,11 +65,18 @@ document.getElementById('btnLoja').addEventListener('click', function () {
 
 function buyPage(id) {
     const camisa = id
-
-
     localStorage.setItem('camisa', camisa)
+    if (window.location.href == 'file:///C:/Users/Is207/OneDrive/Documentos/GitHub/Loja_virtual/index.html') {
+
+        window.location.href = 'pags/pagCompra.html'
+    }
+    else if (window.location.href == 'file:///C:/Users/Is207/OneDrive/Documentos/GitHub/Loja_virtual/pags/pagCompra.html') {
+
+        window.location.href = 'pagCompra.html'
+    }
+
+
     // console.log(localStorage.getItem('camisa'))
-    window.location.href = '../pags/pagCompra.html'
 
 }
 
