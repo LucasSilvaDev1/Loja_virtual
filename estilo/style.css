@@ -387,45 +387,6 @@ section {
     margin: 0px 5px;
 }
 
-.clicado {
-    animation: clicado 0.3s linear;
-    box-shadow: -1px -1px 20px white;
-}
-
-.kit1 {
-    background-image: linear-gradient(125deg, rgba(255, 255, 255, 0.751), rgb(91, 84, 56));
-    content-visibility: hidden;
-}
-
-.kit2 {
-    background-image: linear-gradient(125deg, black, green);
-    content-visibility: hidden;
-}
-
-.kit3 {
-    background-image: linear-gradient(125deg, black, rgb(165, 153, 106));
-    content-visibility: hidden;
-}
-
-.kit4 {
-    background-image: linear-gradient(125deg, rgb(165, 153, 106), black);
-    content-visibility: hidden;
-}
-
-.kit-masculino {
-    display: flex;
-    justify-content: center;
-    /* background-color: rgba(128, 128, 128, 0.792); */
-    padding: 10px;
-    border-radius: 10px;
-    width: 80vw;
-    height: 225px;
-}
-
-.kit-masculino>img {
-    width: 200px;
-    background-size: cover;
-}
 
 .textos {
     display: flex;

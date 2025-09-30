@@ -66,9 +66,10 @@ document.getElementById('btnLoja').addEventListener('click', function () {
 function buyPage(id) {
     const camisa = id
 
+
     localStorage.setItem('camisa', camisa)
     // console.log(localStorage.getItem('camisa'))
-    window.location.href = 'pags/pagCompra.html'
+    window.location.href = '../pags/pagCompra.html'
 
 }
 
@@ -89,6 +90,7 @@ function mudarcamisa() {
         img2.src = '../imgs/masculino/camisas/' + camisa + '-v.png'
     }
 }
+
 
 // mudar quantidade 
 
@@ -116,13 +118,21 @@ document.getElementById('btAdd').addEventListener('click', function () {
 function sugestoes() {
 
     let reco = document.getElementById("Reco")
-    let Numeros = [1, 2, 3, 4, 5, 6]
+    let Numeros = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6']
+    const camisa = localStorage.getItem('camisa')
+    indice = 0
 
-    Numeros.sort(() => Math.random() - 0.5)
-    reco.innerHTML = `
-        <article class="camisa-anime produto" id = "a4" >
+    while (indice < 11) {
+        if (Numeros[indice] == camisa) {
+            Numeros.splice(indice, 1)
+        } else {
+            indice = indice + 1
+        } if (indice > 10) {
+            Numeros.sort(() => Math.random() - 0.5)
+            reco.innerHTML = `
+        <article class="camisa-anime produto" id ="${Numeros[0]}" onclick="buyPage(id)">
             <div class="grid1">
-                <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[0]}-v.png" alt="OverSize Traktor">
+                <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[0]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -133,9 +143,9 @@ function sugestoes() {
                     </div>
             </div>
             </article >
-            <article class="camisa-anime produto" id="a4">
+            <article class="camisa-anime produto" id="${Numeros[2]}" onclick="buyPage(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[1]}-v.png" alt="OverSize Traktor">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[2]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -146,9 +156,9 @@ function sugestoes() {
                     </div>
                 </div>
             </article>
-            <article class="camisa-anime produto" id="a4">
+            <article class="camisa-anime produto" id="${Numeros[4]}" onclick="buyPage(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[2]}-v.png" alt="OverSize Traktor">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[4]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -159,9 +169,9 @@ function sugestoes() {
                     </div>
                 </div>
             </article>
-            <article class="camisa-anime produto" id="a4">
+            <article class="camisa-anime produto" id="${Numeros[6]}" onclick="buyPage(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[3]}-v.png" alt="OverSize Traktor">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[6]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -172,9 +182,22 @@ function sugestoes() {
                     </div>
                 </div>
             </article>
-            <article class="camisa-anime produto" id="a4">
+            <article class="camisa-anime produto" id="${Numeros[8]}" onclick="buyPage(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a${Numeros[4]}-v.png" alt="OverSize Traktor">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[8]}-v.png" alt="OverSize Traktor">
+                    <div class="classificacao">
+                        <p>4.5★★★★☆</p>
+                        <p style="font-size: x-small;">142</p>
+                    </div>
+                    <div class="descrissao">
+                        <p>R$ 69,99</p>
+                        <p style="text-decoration: line-through;">R$ 89,99</p>
+                    </div>
+                </div>
+            </article>
+            <article class="camisa-anime produto" id="${Numeros[5]}" onclick="buyPage(id)">
+                <div class="grid1">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[5]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -186,4 +209,7 @@ function sugestoes() {
                 </div>
             </article>
     `
+        }
+    }
+
 }
