@@ -69,7 +69,7 @@ function buyPage(id) {
 
     localStorage.setItem('camisa', camisa)
     // console.log(localStorage.getItem('camisa'))
-    window.location.href = '../pags/pagCompra.html'
+    window.location.href = 'pags/pagCompra.html'
 
 }
 
