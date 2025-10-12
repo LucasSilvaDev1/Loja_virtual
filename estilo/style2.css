@@ -238,9 +238,22 @@
 
 .produto{
     margin: 5px;
+    width: 165px;
+    height: auto;
+}
+
+.grid1{
+    width: 165px;
 }
 
 .grid1>img{
+    width: 135px;
+}
+
+.descrissao,
+.classificacao {
+    background-color: #00668c;
+    height: 28px;
     width: 165px;
 }
 
