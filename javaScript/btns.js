@@ -66,18 +66,15 @@ document.getElementById('btnLoja').addEventListener('click', function () {
 function buyPage(id) {
     const camisa = id
     localStorage.setItem('camisa', camisa)
-    if (window.location.href == 'file:///C:/Users/Is207/OneDrive/Documentos/GitHub/Loja_virtual/index.html') {
-
-        window.location.href = 'pags/pagCompra.html'
-    }
-    else if (window.location.href == 'file:///C:/Users/Is207/OneDrive/Documentos/GitHub/Loja_virtual/pags/pagCompra.html') {
-
-        window.location.href = 'pagCompra.html'
-    }
-
-
+    window.location.href = 'pags/pagCompra.html'
     // console.log(localStorage.getItem('camisa'))
+}
 
+function buyPageReload(id){
+    const camisa = id
+    localStorage.removeItem('camisa' , camisa)
+    localStorage.setItem('camisa', camisa)
+    window.location.href = 'pagCompra.html'
 }
 
 // mudar camisas na segunda pagina
@@ -137,7 +134,7 @@ function sugestoes() {
         } if (indice > 10) {
             Numeros.sort(() => Math.random() - 0.5)
             reco.innerHTML = `
-        <article class="camisa-anime produto" id ="${Numeros[0]}" onclick="buyPage(id)">
+        <article class="camisa-anime produto" id ="${Numeros[0]}" onclick="buyPageReload(id)">
             <div class="grid1">
                 <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[0]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
@@ -150,7 +147,7 @@ function sugestoes() {
                     </div>
             </div>
             </article >
-            <article class="camisa-anime produto" id="${Numeros[2]}" onclick="buyPage(id)">
+            <article class="camisa-anime produto" id="${Numeros[2]}" onclick="buyPageReload(id)">
                 <div class="grid1">
                     <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[2]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
@@ -163,7 +160,7 @@ function sugestoes() {
                     </div>
                 </div>
             </article>
-            <article class="camisa-anime produto" id="${Numeros[4]}" onclick="buyPage(id)">
+            <article class="camisa-anime produto" id="${Numeros[4]}" onclick="buyPageReload(id)">
                 <div class="grid1">
                     <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[4]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
@@ -176,7 +173,7 @@ function sugestoes() {
                     </div>
                 </div>
             </article>
-            <article class="camisa-anime produto" id="${Numeros[6]}" onclick="buyPage(id)">
+            <article class="camisa-anime produto" id="${Numeros[6]}" onclick="buyPageReload(id)">
                 <div class="grid1">
                     <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[6]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
@@ -189,7 +186,7 @@ function sugestoes() {
                     </div>
                 </div>
             </article>
-            <article class="camisa-anime produto" id="${Numeros[8]}" onclick="buyPage(id)">
+            <article class="camisa-anime produto" id="${Numeros[8]}" onclick="buyPageReload(id)">
                 <div class="grid1">
                     <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[8]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
@@ -202,7 +199,7 @@ function sugestoes() {
                     </div>
                 </div>
             </article>
-            <article class="camisa-anime produto" id="${Numeros[5]}" onclick="buyPage(id)">
+            <article class="camisa-anime produto" id="${Numeros[5]}" onclick="buyPageReload(id)">
                 <div class="grid1">
                     <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[5]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
