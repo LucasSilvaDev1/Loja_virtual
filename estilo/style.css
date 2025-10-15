@@ -160,9 +160,9 @@ body {
     flex-direction: column;
 }
 
-.loja{
+.loja {
     z-index: 2;
-      background-color: #f5f4f1;
+    background-color: #f5f4f1;
 }
 
 .loja>.subLoja {
@@ -225,46 +225,85 @@ body {
     text-shadow: 1px 1px 15px #cccbc8;
 }
 
-/* .grid2{
-    height: 100%;
-    display: flex;
+
+/* Carrinho de compras */
+
+.carrinho {
+    position: fixed;
+    right: 50px;
+    top: 70px;
+    display: none;
     flex-direction: column;
-    justify-content: flex-start;
-} */
-
-.btn-img {
-    background-color: transparent;
-    border: none;
-    text-decoration: none;
-    width: 50px;
-    height: 45px;
+    align-items: center;
+    margin: 0 auto;
+    width: 350px;
+    height: auto;
     padding: 0px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.399);
+    background-color: #f5f4f1;
+    z-index: 1;
 }
 
-
-.btn-img>img {
-    width: 45px;
-    height: 40px;
-    margin: 0;
+.NavCart {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -12px;
 }
 
-.btn-cor {
-    border-radius: 5px;
+#CloseCart {
+    height: 25px;
+    position: relative;
+    left: -42px;
+    border: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.271);
+    border-radius: 15px 0px 0px 0px;
+    color: #00668c;
+    text-decoration: underline;
+}
+
+#CloseCart:hover {
+    scale: 1.05;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.352);
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.itensCart .itemCart {
+    display: flex;
+    height: 60px;
+    width: 300px;
     padding: 5px;
-    margin: 0;
-    border: none;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #00668c;
+    border-radius: 15px;
 
-    width: 45px;
+}
+
+#imgCart {
+    height: 60px;
+}
+
+#ReduCart,
+#AdiCart {
+    width: 25px;
     height: 30px;
+    margin: 3px;
+    border: 1px solid #00668c;
+    border-radius: 5px;
 }
 
-.cor1 {
-    background-color: white;
+#ReduCart:hover,
+#AdiCart:hover {
+    cursor: pointer;
+    scale: 1.05;
+    transition: linear 0.2s;
 }
 
-.cor01 {
-    background-color: black;
-}
+
 
 .divCamisa {
     display: grid;
@@ -288,7 +327,7 @@ article>img {
     width: 190px;
     height: 280px;
     border-radius: 30px;
-    border: 1px solid #00668c;
+    border: 2px solid #00668c;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.749);
     align-items: center;
     color: rgb(0, 0, 0);

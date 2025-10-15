@@ -61,6 +61,18 @@ document.getElementById('btnLoja').addEventListener('click', function () {
     }
 })
 
+// Carrinho de compra
+
+function OpenCart(){
+    const carrinho = document.getElementById('Cart')
+    carrinho.style.display = 'flex'
+}
+
+function CloseCart(){
+     const carrinho = document.getElementById('Cart')
+     carrinho.style.display = 'none'
+}
+
 // redirecionamento para paginas de compra
 
 function buyPage(id) {

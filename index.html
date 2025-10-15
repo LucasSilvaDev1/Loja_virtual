@@ -32,7 +32,7 @@
                     search
                 </a>
             </button>
-            <button class="btn" id="shoppingCart">
+            <button class="btn" id="shoppingCart" onclick="OpenCart()">
                 <span class="material-symbols-outlined cart">
                     shopping_cart
                 </span>
@@ -92,7 +92,26 @@
         </div>
     </div>
 
+ <!-- Carrinho de compras -->
 
+    <div class="carrinho" id="Cart">
+        <div class="NavCart">
+            <button id="CloseCart" onclick="CloseCart()">Fechar</button>
+            <p>Itens adicionados no carrinho</p>
+        </div>
+        <div class="itensCart">
+            <div class="itemCart">
+                <img id="imgCart" src="imgs/masculino/camisas/a1-f.png" alt="">
+                <p id="DeskCartItem">Oversized-Goku</p>
+                <p id="SizeItem">GG</p>
+                <button id="ReduCart">-</button>
+                <p id="quantiCart">1</p>
+                <button id="AdiCart">+</button>
+            </div>
+           
+           
+        </div>
+    </div>
 
     <main id="catalogo">
         <!-- Primeira seção de produtos
