@@ -45,7 +45,7 @@
                 </span>
             </button>
             <button class="btn" id="shoppingCart">
-                <span class="material-symbols-outlined cart">
+                <span class="material-symbols-outlined cart" onclick="OpenCart()">
                     shopping_cart
                 </span>
             </button>
@@ -98,13 +98,37 @@
         </div>
     </div>
 
+     <!-- Carrinho de compras -->
+
+    <div class="carrinho" id="Cart">
+        <div class="NavCart">
+            <button id="CloseCart" onclick="CloseCart()">Fechar</button>
+            <p>Itens adicionados no carrinho</p>
+        </div>
+        <div class="avisoCart">
+            <p>-Nenhum-item-adicionado-</p>
+        </div>
+        <div class="itensCart">
+            <div class="itemCart">
+                <img id="imgCart" src="imgs/masculino/camisas/a1-f.png" alt="">
+                <p id="DeskCartItem">Oversized-Goku</p>
+                <p id="SizeItem">GG</p>
+                <button id="ReduCart">-</button>
+                <p id="quantiCart">1</p>
+                <button id="AdiCart">+</button>
+            </div>
+           
+           
+        </div>
+    </div>
+
     <main>
         <!-- Imagens do pedido selecionado -->
 
         <div class="mainPgBuy">
             <div class="divImgBuy">
                 <div class="divImg1">
-                    <a href="../index.html" style="font: 40px;" class="material-symbols-outlined seta">undo</a>
+                    <a id="btReturn" href="../index.html" style="font: 40px;" class="material-symbols-outlined seta">undo</a>
                     <img id="imgBuy" src="" alt="">
                 </div>
                 <div class="divImg2">
@@ -138,8 +162,8 @@
                     <p>R$ 69,99</p>
                     <p style="text-decoration: line-through;">R$ 89,99</p>
                 </div>
-                <div class="carrinho">
-                    <button class="btCart">
+                <div>
+                    <button class="btCart" onclick="OpenDivCart()">
                         <p>Adicionar</p>
                         <span class="material-symbols-outlined cart">
                             shopping_cart
@@ -149,6 +173,31 @@
             </div>
         </div>
 
+        <!-- div carrinho -->
+        <div class="Divcarrinho" id="DivCartshop">
+            <button class="CancelCart" onclick="CloseDivCart()">X</button>
+            <p>Selecione o tamanho e quantidade do seu pedido!</p>
+            <div class="DivCart">
+                <div class="SizeSelect">
+                    <p>tamanhos disponiveis:</p>
+                    <button id="P">P</button>
+                    <button id="M">M</button>
+                    <button id="G">G</button>
+                    <button id="GG">GG</button>
+                </div>
+                <div class="QuantDivCart">
+                    <p>quantidade</p>
+                    <div class="btsQuantCart">
+                        <button>-</button>
+                        <input type="number" id="" readonly placeholder="1">
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btaddCart">
+                <button>Concluir</button>
+            </div>
+        </div>
 
         <!-- Recomendações -->
 

@@ -34,11 +34,14 @@ search.addEventListener('blur', () => {
 const menuLateral = document.getElementById('Menulateral')
 
 document.getElementById('fecharMenu').addEventListener('click', function () {
-
+    const btreturn = document.getElementById('btReturn')
+    btreturn.innerText = 'undo'
     menuLateral.style.display = 'none'
 })
 
 document.getElementById('openMenu').addEventListener('click', function () {
+     const btreturn = document.getElementById('btReturn')
+     btreturn.innerText = ''
     menuLateral.style.display = 'grid'
 })
 
@@ -73,6 +76,17 @@ function CloseCart(){
      carrinho.style.display = 'none'
 }
 
+// div carrinho de compra
+
+function CloseDivCart(){
+    const cart = document.getElementById("DivCartshop")
+    cart.style.display = 'none'
+}
+
+function OpenDivCart(){
+    const cart = document.getElementById("DivCartshop")
+    cart.style.display = 'block'
+    }
 // redirecionamento para paginas de compra
 
 function buyPage(id) {
@@ -214,6 +228,32 @@ function sugestoes() {
             <article class="camisa-anime produto" id="${Numeros[5]}" onclick="buyPageReload(id)">
                 <div class="grid1">
                     <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[5]}-v.png" alt="OverSize Traktor">
+                    <div class="classificacao">
+                        <p>4.5★★★★☆</p>
+                        <p style="font-size: x-small;">142</p>
+                    </div>
+                    <div class="descrissao">
+                        <p>R$ 69,99</p>
+                        <p style="text-decoration: line-through;">R$ 89,99</p>
+                    </div>
+                </div>
+            </article>
+            <article class="camisa-anime produto" id="${Numeros[1]}" onclick="buyPageReload(id)">
+                <div class="grid1">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[1]}-v.png" alt="OverSize Traktor">
+                    <div class="classificacao">
+                        <p>4.5★★★★☆</p>
+                        <p style="font-size: x-small;">142</p>
+                    </div>
+                    <div class="descrissao">
+                        <p>R$ 69,99</p>
+                        <p style="text-decoration: line-through;">R$ 89,99</p>
+                    </div>
+                </div>
+            </article>
+            <article class="camisa-anime produto" id="${Numeros[3]}" onclick="buyPageReload(id)">
+                <div class="grid1">
+                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[3]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
