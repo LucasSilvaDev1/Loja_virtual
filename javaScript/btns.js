@@ -87,6 +87,51 @@ function OpenDivCart(){
     const cart = document.getElementById("DivCartshop")
     cart.style.display = 'block'
     }
+
+    document.getElementById('adiQuant').addEventListener('click', function (){
+            const quantidade = document.getElementById('NumCart')
+            let numQuant = Number(quantidade.placeholder)
+            if (quantidade.placeholder <= 100){
+                numQuant++
+                quantidade.placeholder = numQuant
+            }
+
+    })
+    document.getElementById('reduQuant').addEventListener('click', function(){
+        const quantidade = document.getElementById('NumCart')
+        let numQuant = Number(quantidade.placeholder)
+        if (quantidade.placeholder >= 1){
+            numQuant--
+            quantidade.placeholder = numQuant
+        }
+    })
+    
+
+function Addsize(id){
+
+    const size = id
+    localStorage.setItem('sizecamisa', size)
+}
+
+function AddToCart(){
+    const size = localStorage.getItem('sizecamisa')
+    const quantidade = document.getElementById('NumCart').placeholder
+    const camisa = localStorage.getItem('camisa')
+    const divcart = document.getElementById('CartItem')
+
+    divcart.innerHTML += `
+             <div class="itemCart">
+                <img id="imgCart" src="../imgs/masculino/camisas/${camisa}-f.png" alt="">
+                <p id="DeskCartItem">Oversized-Goku</p>
+                <p id="SizeItem">${size}</p>
+                <button id="ReduCart" title="Remover produto?">-</button>
+                <p id="quantiCart">${quantidade}</p>
+                <button id="AdiCart">+</button>
+            </div>
+    `
+    CloseDivCart()
+    OpenCart()
+}
 // redirecionamento para paginas de compra
 
 function buyPage(id) {

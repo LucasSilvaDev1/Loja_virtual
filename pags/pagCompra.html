@@ -98,7 +98,7 @@
         </div>
     </div>
 
-     <!-- Carrinho de compras -->
+    <!-- Carrinho de compras -->
 
     <div class="carrinho" id="Cart">
         <div class="NavCart">
@@ -108,7 +108,7 @@
         <div class="avisoCart">
             <p>-Nenhum-item-adicionado-</p>
         </div>
-        <div class="itensCart">
+        <div class="itensCart" id="CartItem">
             <div class="itemCart">
                 <img id="imgCart" src="../imgs/masculino/camisas/a1-f.png" alt="">
                 <p id="DeskCartItem">Oversized-Goku</p>
@@ -117,8 +117,6 @@
                 <p id="quantiCart">1</p>
                 <button id="AdiCart">+</button>
             </div>
-           
-           
         </div>
     </div>
 
@@ -128,7 +126,8 @@
         <div class="mainPgBuy">
             <div class="divImgBuy">
                 <div class="divImg1">
-                    <a id="btReturn" href="../index.html" style="font: 40px;" class="material-symbols-outlined seta">undo</a>
+                    <a id="btReturn" href="../index.html" style="font: 40px;"
+                        class="material-symbols-outlined seta">undo</a>
                     <img id="imgBuy" src="" alt="">
                 </div>
                 <div class="divImg2">
@@ -182,22 +181,22 @@
             <div class="DivCart">
                 <div class="SizeSelect">
                     <p>tamanhos disponiveis:</p>
-                    <button id="P">P</button>
-                    <button id="M">M</button>
-                    <button id="G">G</button>
-                    <button id="GG">GG</button>
+                    <button id="P" onclick="Addsize(id)">P</button>
+                    <button id="M" onclick="Addsize(id)">M</button>
+                    <button id="G" onclick="Addsize(id)">G</button>
+                    <button id="GG" onclick="Addsize(id)">GG</button>
                 </div>
                 <div class="QuantDivCart">
                     <p>quantidade</p>
                     <div class="btsQuantCart">
-                        <button>-</button>
+                        <button id="reduQuant">-</button>
                         <input type="number" id="NumCart" readonly placeholder="1">
-                        <button>+</button>
+                        <button id="adiQuant">+</button>
                     </div>
                 </div>
             </div>
             <div class="btaddCart">
-                <button>Concluir</button>
+                <button onclick="AddToCart()">Concluir</button>
             </div>
         </div>
 
@@ -205,7 +204,7 @@
 
         <section class="Recomendações" id="Reco">
 
- 
+
 
         </section>
 
