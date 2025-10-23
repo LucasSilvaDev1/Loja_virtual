@@ -86,6 +86,7 @@ function CloseDivCart(){
 function OpenDivCart(){
     const cart = document.getElementById("DivCartshop")
     cart.style.display = 'block'
+    localStorage.removeItem('sizecamisa', size)
     }
 
     document.getElementById('adiQuant').addEventListener('click', function (){
@@ -108,21 +109,28 @@ function OpenDivCart(){
     
 
 function Addsize(id){
-
+    const btn = document.getElementById(id)
     const size = id
     localStorage.setItem('sizecamisa', size)
+    
+    btn.style.backgroundColor = '#327e9a'
 }
 
 function AddToCart(){
     const size = localStorage.getItem('sizecamisa')
-    const quantidade = document.getElementById('NumCart').placeholder
+    const quantidade = Number(document.getElementById('NumCart').placeholder || 1)
     const camisa = localStorage.getItem('camisa')
     const divcart = document.getElementById('CartItem')
+    const descrisao = localStorage.getItem('descrisao')
+
+    if (!size || !camisa){
+        alert('Selecione um tamanho e um produto antes.')
+    }
 
     divcart.innerHTML += `
              <div class="itemCart">
                 <img id="imgCart" src="../imgs/masculino/camisas/${camisa}-f.png" alt="">
-                <p id="DeskCartItem">Oversized-Goku</p>
+                <p id="DeskCartItem">${descrisao}</p>
                 <p id="SizeItem">${size}</p>
                 <button id="ReduCart" title="Remover produto?">-</button>
                 <p id="quantiCart">${quantidade}</p>
@@ -135,16 +143,21 @@ function AddToCart(){
 // redirecionamento para paginas de compra
 
 function buyPage(id) {
+    const descrisao = document.getElementById("img" + id)
+    localStorage.setItem('descrisao', descrisao.alt)
     const camisa = id
     localStorage.setItem('camisa', camisa)
     window.location.href = 'pags/pagCompra.html'
-    // console.log(localStorage.getItem('camisa'))
+    // console.log(localStorage.getItem('descrisao'))
 }
 
 function buyPageReload(id){
     const camisa = id
+    const descrisao = document.getElementById("img" + id)
     localStorage.removeItem('camisa' , camisa)
     localStorage.setItem('camisa', camisa)
+    localStorage.removeItem('descrisao')
+    localStorage.setItem('descrisao', descrisao.alt)
     window.location.href = 'pagCompra.html'
 }
 
@@ -193,7 +206,8 @@ document.getElementById('btAdd').addEventListener('click', function () {
 function sugestoes() {
 
     let reco = document.getElementById("Reco")
-    let Numeros = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6']
+    let Numeros = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6'] 
+
     const camisa = localStorage.getItem('camisa')
     indice = 0
 
@@ -207,7 +221,7 @@ function sugestoes() {
             reco.innerHTML = `
         <article class="camisa-anime produto" id ="${Numeros[0]}" onclick="buyPageReload(id)">
             <div class="grid1">
-                <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[0]}-v.png" alt="OverSize Traktor">
+                <img id="img${Numeros[0]}" class="verso preto" src="../imgs/masculino/camisas/${Numeros[0]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -220,7 +234,7 @@ function sugestoes() {
             </article >
             <article class="camisa-anime produto" id="${Numeros[2]}" onclick="buyPageReload(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[2]}-v.png" alt="OverSize Traktor">
+                    <img id="img${Numeros[2]}" class="verso preto" src="../imgs/masculino/camisas/${Numeros[2]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -233,7 +247,7 @@ function sugestoes() {
             </article>
             <article class="camisa-anime produto" id="${Numeros[4]}" onclick="buyPageReload(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[4]}-v.png" alt="OverSize Traktor">
+                    <img id="img${Numeros[4]}" class="verso preto" src="../imgs/masculino/camisas/${Numeros[4]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -246,7 +260,7 @@ function sugestoes() {
             </article>
             <article class="camisa-anime produto" id="${Numeros[6]}" onclick="buyPageReload(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[6]}-v.png" alt="OverSize Traktor">
+                    <img id="img${Numeros[6]}" class="verso preto" src="../imgs/masculino/camisas/${Numeros[6]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -259,7 +273,7 @@ function sugestoes() {
             </article>
             <article class="camisa-anime produto" id="${Numeros[8]}" onclick="buyPageReload(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[8]}-v.png" alt="OverSize Traktor">
+                    <img id="img${Numeros[8]}" class="verso preto" src="../imgs/masculino/camisas/${Numeros[8]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -272,7 +286,7 @@ function sugestoes() {
             </article>
             <article class="camisa-anime produto" id="${Numeros[5]}" onclick="buyPageReload(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[5]}-v.png" alt="OverSize Traktor">
+                    <img id="img${Numeros[5]}" class="verso preto" src="../imgs/masculino/camisas/${Numeros[5]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -285,7 +299,7 @@ function sugestoes() {
             </article>
             <article class="camisa-anime produto" id="${Numeros[1]}" onclick="buyPageReload(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[1]}-v.png" alt="OverSize Traktor">
+                    <img id="img${Numeros[1]}" class="verso preto" src="../imgs/masculino/camisas/${Numeros[1]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
@@ -298,7 +312,7 @@ function sugestoes() {
             </article>
             <article class="camisa-anime produto" id="${Numeros[3]}" onclick="buyPageReload(id)">
                 <div class="grid1">
-                    <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/${Numeros[3]}-v.png" alt="OverSize Traktor">
+                    <img id="img${Numeros[3]}" class="verso preto" src="../imgs/masculino/camisas/${Numeros[3]}-v.png" alt="OverSize Traktor">
                     <div class="classificacao">
                         <p>4.5★★★★☆</p>
                         <p style="font-size: x-small;">142</p>
