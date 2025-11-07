@@ -40,8 +40,8 @@ document.getElementById('fecharMenu').addEventListener('click', function () {
 })
 
 document.getElementById('openMenu').addEventListener('click', function () {
-     const btreturn = document.getElementById('btReturn')
-     btreturn.innerText = ''
+    const btreturn = document.getElementById('btReturn')
+    btreturn.innerText = ''
     menuLateral.style.display = 'grid'
 })
 
@@ -66,80 +66,213 @@ document.getElementById('btnLoja').addEventListener('click', function () {
 
 // Carrinho de compra
 
-function OpenCart(){
+function OpenCart() {
     const carrinho = document.getElementById('Cart')
     carrinho.style.display = 'flex'
 }
 
-function CloseCart(){
-     const carrinho = document.getElementById('Cart')
-     carrinho.style.display = 'none'
+function CloseCart() {
+    const carrinho = document.getElementById('Cart')
+    carrinho.style.display = 'none'
+}
+
+function Addsize(id) {
+    const btn = document.getElementById(id)
+    const size = id
+    localStorage.setItem('sizecamisa', size)
+
+    btn.style.backgroundColor = '#327e9a'
 }
 
 // div carrinho de compra
 
-function CloseDivCart(){
+// Lê o carrinho ou retorna array vazio caso não exista
+function pegarCarrinho() {
+    try {
+        return JSON.parse(localStorage.getItem('carrinho')) || [];
+    } catch (e) {
+        console.error('Erro ao ler carrinho do localStorage:', e)
+        return []
+    }
+}
+
+// Salva o array de carrinho no localStorage
+function salvarCarrinho(carrinho) {
+    try {
+        localStorage.setItem('carrinho', JSON.stringify(carrinho))
+    } catch (e) {
+        console.error('Erro ao salvar carrinho no localStorage')
+    }
+}
+
+/* ---------- Renderização do carrinho no DOM ---------- */
+function renderCarrinho() {
+    const divcart = document.getElementById('CartItem')
+    if (!divcart) {
+        console.warn('Container #CartItem não encontrado no DOM')
+        return
+    }
+
+
+    const carrinho = pegarCarrinho()
+    divcart.innerHTML = ''
+
+    if (carrinho.length === 0) {
+        divcart.innerHTML = '<p class="vazio">Seu Carrinho está vazio.</p>';
+        atualizarContadorCarrinho()
+        return
+    }
+
+    carrinho.forEach((item, index) => {
+        const itemHTML = document.createElement('div')
+        itemHTML.className = 'itemCart'
+        itemHTML.innerHTML = `
+        <img class="imgCart" src="${item.imagem}" alt="${item.nome}">
+        <p class="DeskCartItem">${item.nome}</p>
+        <p class ="SizeItem">${item.tamanho}</p>
+        <button class="ReduCart" data-index="${index}" title="Remover 1">-</button> 
+        <p class="quantiCart">${item.quantidade}</p>
+        <button class="AdiCart" data-index="${index}">+</button>  
+        `;
+        divcart.appendChild(itemHTML)
+    })
+
+    ativarBotoesCarrinho(); // liga os listeners aos botões recém-criados
+    atualizarContadorCarrinho();
+}
+function ativarBotoesCarrinho() {
+    const carrinho = pegarCarrinho()
+
+    document.querySelectorAll('.AdiCart').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const idx = Number(btn.dataset.index);
+            if (Number.isInteger(idx) && carrinho[idx]) {
+                carrinho[idx].quantidade += 1
+                salvarCarrinho(carrinho)
+                renderCarrinho()
+            }
+        })
+    })
+
+    document.querySelectorAll('.ReduCart').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const idx = Number(btn.dataset.index)
+            if (Number.isInteger(idx) && carrinho[idx]) {
+                if (carrinho[idx].quantidade > 1) {
+                    carrinho[idx].quantidade -= 1
+                } else {
+                    carrinho.splice(idx, 1)
+                }
+                salvarCarrinho(carrinho)
+                renderCarrinho()
+            }
+        })
+    })
+}
+
+function atualizarContadorCarrinho() {
+    const contador = document.getElementById('contadorCarrinho')
+    if (!contador) return;
+    const carrinho = pegarCarrinho()
+    const total = carrinho.reduce((acc, it) => acc + (it.quantidade || 0), 0)
+    contador.textContent = total;
+}
+
+function AddToCart() {
+    const size = localStorage.getItem('sizecamisa')
+    const quantidade = document.getElementById('NumCart').placeholder
+    const camisa = localStorage.getItem('camisa')
+
+    if (!size || !camisa) {
+        alert('Selecione um tamanho e um produto antes.')
+        return
+    }
+
+    const id = `${camisa}-${size}`
+
+    const produto = {
+        id,
+        nome: "Oversized-Goku",
+        imagem: `../imgs/masculino/camisas/${camisa}-f.png`,
+        tamanho: size,
+        quantidade: quantidade
+    }
+
+    const carrinho = pegarCarrinho()
+
+    const idxExistente = carrinho.findIndex(it => it.id === produto.id)
+    if (idxExistente > -1) {
+        carrinho[idxExistente].quantidade += produto.quantidade
+    } else {
+        carrinho.push(produto)
+    }
+
+    salvarCarrinho(carrinho)
+    renderCarrinho()
+
+    if (typeof CloseDivCart === 'function') CloseDivCart();
+    if (typeof OpenCart === 'function') OpenCart()
+}
+function CloseDivCart() {
     const cart = document.getElementById("DivCartshop")
     cart.style.display = 'none'
 }
 
-function OpenDivCart(){
+function OpenDivCart() {
     const cart = document.getElementById("DivCartshop")
     cart.style.display = 'block'
-    localStorage.removeItem('sizecamisa', size)
-    }
-
-    document.getElementById('adiQuant').addEventListener('click', function (){
-            const quantidade = document.getElementById('NumCart')
-            let numQuant = Number(quantidade.placeholder)
-            if (quantidade.placeholder <= 100){
-                numQuant++
-                quantidade.placeholder = numQuant
-            }
-
-    })
-    document.getElementById('reduQuant').addEventListener('click', function(){
-        const quantidade = document.getElementById('NumCart')
-        let numQuant = Number(quantidade.placeholder)
-        if (quantidade.placeholder >= 1){
-            numQuant--
-            quantidade.placeholder = numQuant
-        }
-    })
-    
-
-function Addsize(id){
-    const btn = document.getElementById(id)
-    const size = id
-    localStorage.setItem('sizecamisa', size)
-    
-    btn.style.backgroundColor = '#327e9a'
+    localStorage.removeItem('sizecamisa')
 }
 
-function AddToCart(){
-    const size = localStorage.getItem('sizecamisa')
-    const quantidade = Number(document.getElementById('NumCart').placeholder || 1)
-    const camisa = localStorage.getItem('camisa')
-    const divcart = document.getElementById('CartItem')
-    const descrisao = localStorage.getItem('descrisao')
+window.addEventListener('DOMContentLoaded', () => {
+    renderCarrinho()
+})
 
-    if (!size || !camisa){
-        alert('Selecione um tamanho e um produto antes.')
-    }
+//     document.getElementById('adiQuant').addEventListener('click', function (){
+//             const quantidade = document.getElementById('NumCart')
+//             let numQuant = Number(quantidade.placeholder)
+//             if (quantidade.placeholder <= 100){
+//                 numQuant++
+//                 quantidade.placeholder = numQuant
+//             }
 
-    divcart.innerHTML += `
-             <div class="itemCart">
-                <img id="imgCart" src="../imgs/masculino/camisas/${camisa}-f.png" alt="">
-                <p id="DeskCartItem">${descrisao}</p>
-                <p id="SizeItem">${size}</p>
-                <button id="ReduCart" title="Remover produto?">-</button>
-                <p id="quantiCart">${quantidade}</p>
-                <button id="AdiCart">+</button>
-            </div>
-    `
-    CloseDivCart()
-    OpenCart()
-}
+//     })
+//     document.getElementById('reduQuant').addEventListener('click', function(){
+//         const quantidade = document.getElementById('NumCart')
+//         let numQuant = Number(quantidade.placeholder)
+//         if (quantidade.placeholder >= 1){
+//             numQuant--
+//             quantidade.placeholder = numQuant
+//         }
+//     })
+
+
+
+
+// function AddToCart(){
+//     const size = localStorage.getItem('sizecamisa')
+//     const quantidade = Number(document.getElementById('NumCart').placeholder || 1)
+//     const camisa = localStorage.getItem('camisa')
+//     const divcart = document.getElementById('CartItem')
+//     const descrisao = localStorage.getItem('descrisao')
+
+//     if (!size || !camisa){
+//         alert('Selecione um tamanho e um produto antes.')
+//     }
+
+//     divcart.innerHTML += `
+//              <div class="itemCart">
+//                 <img class="imgCart" src="../imgs/masculino/camisas/${camisa}-f.png" alt="">
+//                 <p id="DeskCartItem">${descrisao}</p>
+//                 <p id="SizeItem">${size}</p>
+//                 <button id="ReduCart" title="Remover produto?">-</button>
+//                 <p id="quantiCart">${quantidade}</p>
+//                 <button id="AdiCart">+</button>
+//             </div>
+//     `
+//     CloseDivCart()
+//     OpenCart()
+// }
 // redirecionamento para paginas de compra
 
 function buyPage(id) {
@@ -147,14 +280,14 @@ function buyPage(id) {
     localStorage.setItem('descrisao', descrisao.alt)
     const camisa = id
     localStorage.setItem('camisa', camisa)
-    window.location.href = 'pags/pagCompra.html'
+    window.location.href = 'pagCompra.html'
     // console.log(localStorage.getItem('descrisao'))
 }
 
-function buyPageReload(id){
+function buyPageReload(id) {
     const camisa = id
     const descrisao = document.getElementById("img" + id)
-    localStorage.removeItem('camisa' , camisa)
+    localStorage.removeItem('camisa', camisa)
     localStorage.setItem('camisa', camisa)
     localStorage.removeItem('descrisao')
     localStorage.setItem('descrisao', descrisao.alt)
@@ -188,7 +321,7 @@ let valor = Number(inputQuant.placeholder)
 
 document.getElementById('btReduce').addEventListener("click", function () {
     if (inputQuant.placeholder > 1) {
-        valor--
+        valor - 100
         inputQuant.placeholder = valor
     }
     console.log(valor)
@@ -206,7 +339,7 @@ document.getElementById('btAdd').addEventListener('click', function () {
 function sugestoes() {
 
     let reco = document.getElementById("Reco")
-    let Numeros = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6'] 
+    let Numeros = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6']
 
     const camisa = localStorage.getItem('camisa')
     indice = 0

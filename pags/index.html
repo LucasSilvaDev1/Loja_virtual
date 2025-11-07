@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>street Style</title>
-    <link rel="stylesheet" href="estilo/style.css">
-    <link rel="stylesheet" href="estilo/layouts-respon.css">
+    <link rel="stylesheet" href="../estilo/style.css">
+    <link rel="stylesheet" href="../estilo/layouts-respon.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=0" />
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
@@ -99,17 +99,18 @@
             <button id="CloseCart" onclick="CloseCart()">Fechar</button>
             <p>Itens adicionados no carrinho</p>
         </div>
-        <div class="itensCart">
+        <div class="avisoCart">
+            
+        </div>
+        <div class="itensCart" id="CartItem">
             <div class="itemCart">
-                <img id="imgCart" src="imgs/masculino/camisas/a1-f.png" alt="">
-                <p id="DeskCartItem">Oversized Goku Ginasio</p>
+                <img class="imgCart" src="../imgs/masculino/camisas/a1-f.png" alt="">
+                <p id="DeskCartItem">Oversized-Goku</p>
                 <p id="SizeItem">GG</p>
                 <button id="ReduCart" title="Remover produto?">-</button>
                 <p id="quantiCart">1</p>
                 <button id="AdiCart">+</button>
             </div>
-           
-           
         </div>
     </div>
 
@@ -128,7 +129,7 @@
                     <article class="camisa-masculina produto" id="c1" onmouseover="mudarCamisa(id)" 
                         onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imgc1" src="imgs/masculino/camisas/c1-f.png" alt="Oversize AntiSocialClub">
+                            <img id="imgc1" src="../imgs/masculino/camisas/c1-f.png" alt="Oversize AntiSocialClub">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
                                 <p style="font-size: x-small;">142</p>
@@ -142,7 +143,7 @@
                     <!--article 2-->
                     <article class="camisa-masculina produto" id="c2" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imgc2" src="imgs/masculino/camisas/c2-f.png" alt="Oversize Santacruz">
+                            <img id="imgc2" src="../imgs/masculino/camisas/c2-f.png" alt="Oversize Santacruz">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
                                 <p style="font-size: x-small;">102</p>
@@ -156,7 +157,7 @@
                     <!--article 3-->
                     <article class="camisa-masculina produto" id="c3" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img class="vermelho frente" id="imgc3" src="imgs/masculino/camisas/c3-f.png"
+                            <img class="vermelho frente" id="imgc3" src="../imgs/masculino/camisas/c3-f.png"
                                 alt="Oversize Sonhador">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
@@ -171,7 +172,7 @@
                     <!--article 4-->
                     <article class="camisa-masculina produto" id="c4" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imgc4" src="imgs/masculino/camisas/c4-f.png" alt="Oversize São Jorge">
+                            <img id="imgc4" src="../imgs/masculino/camisas/c4-f.png" alt="Oversize São Jorge">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
                                 <p style="font-size: x-small;">189</p>
@@ -185,7 +186,7 @@
                     <!-- article 5 -->
                     <article class="camisa-masculina produto" id="c5" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imgc5" class="vermelho frente" src="imgs/masculino/camisas/c5-f.png"
+                            <img id="imgc5" class="vermelho frente" src="../imgs/masculino/camisas/c5-f.png"
                                 alt="Oversize Skyline">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
@@ -200,7 +201,7 @@
                     <!-- article 6 -->
                     <article class="camisa-masculina produto" id="c6" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imgc6" src="imgs/masculino/camisas/c6-f.png" alt="Oversize Vans">
+                            <img id="imgc6" src="../imgs/masculino/camisas/c6-f.png" alt="Oversize Vans">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
                                 <p style="font-size: x-small;">131</p>
@@ -226,7 +227,7 @@
                     <!--Article 1-->
                     <article class="camisa-anime produto" id="a1" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imga1" src="imgs/masculino/camisas/a1-v.png" alt="Oversize Goku Training" class="preto verso">
+                            <img id="imga1" src="../imgs/masculino/camisas/a1-v.png" alt="Oversize Goku Training" class="preto verso">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
                                 <p style="font-size: x-small;">142</p>
@@ -239,7 +240,7 @@
                     </article>
                     <article class="camisa-anime produto" id="a2" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imga2" class="verso branco" src="imgs/masculino/camisas/a2-f.png"
+                            <img id="imga2" class="verso branco" src="../imgs/masculino/camisas/a2-f.png"
                                 alt="Oversize Bleach">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
@@ -253,7 +254,7 @@
                     </article>
                     <article class="camisa-anime produto" id="a3" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imga3" class="verso marrom" src="imgs/masculino/camisas/a3-f.png"
+                            <img id="imga3" class="verso marrom" src="../imgs/masculino/camisas/a3-f.png"
                                 alt="Oversize BlueLock">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
@@ -267,7 +268,7 @@
                     </article>
                     <article class="camisa-anime produto" id="a4" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imga4" class="verso preto" src="imgs/masculino/camisas/a4-f.png"
+                            <img id="imga4" class="verso preto" src="../imgs/masculino/camisas/a4-f.png"
                                 alt="Oversize Evangelion">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
@@ -281,7 +282,7 @@
                     </article>
                     <article class="camisa-anime produto" id="a5" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imga5" src="imgs/masculino/camisas/a5-f.png" alt="Oversize Gojo Satoru">
+                            <img id="imga5" src="../imgs/masculino/camisas/a5-f.png" alt="Oversize Gojo Satoru">
                             <div class="classificacao">
                                 <p>4.5★★★★☆</p>
                                 <p style="font-size: x-small;">142</p>
@@ -294,7 +295,7 @@
                     </article>
                     <article class="camisa-anime produto" id="a6" onmouseover="mudarCamisa(id)"   onclick="buyPage(id)">
                         <div class="grid1">
-                            <img id="imga6" class="verso preto" src="imgs/masculino/camisas/a6-f.png"
+                            <img id="imga6" class="verso preto" src="../imgs/masculino/camisas/a6-f.png"
                                 alt="oversize luffy Nika">
                             <div>
                               <div class="classificacao">
@@ -376,9 +377,9 @@
         </div>
     </footer>
 
-    <script src="javaScript/responsividade.js"></script>
-    <script src="javaScript/order.js"></script>
-    <script src="javaScript/btns.js"></script>
+    <script src="../javaScript/responsividade.js"></script>
+    <script src="../javaScript/order.js"></script>
+    <script src="../javaScript/btns.js"></script>
 </body>
 
 </html>
