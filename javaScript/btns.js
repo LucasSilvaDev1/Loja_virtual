@@ -70,6 +70,22 @@ function OpenCart() {
     const carrinho = document.getElementById('Cart')
     carrinho.style.display = 'flex'
 }
+// mudar quantidade na div carrinho 
+let NumCart = document.getElementById('NumCart')
+let valorCart = NumCart.placeholder
+
+document.getElementById('reduQuant').addEventListener('click', function () {
+    if (valorCart > 1){
+        valorCart--
+        NumCart.placeholder = valorCart
+    }
+})
+document.getElementById('adiQuant').addEventListener('click', function () {
+    if (valorCart < 100){
+        valorCart++
+        NumCart.placeholder = valorCart
+    }
+})
 
 function CloseCart() {
     const carrinho = document.getElementById('Cart')
@@ -147,7 +163,7 @@ function ativarBotoesCarrinho() {
         btn.addEventListener('click', (e) => {
             const idx = Number(btn.dataset.index);
             if (Number.isInteger(idx) && carrinho[idx]) {
-                carrinho[idx].quantidade += 1
+                carrinho[idx].quantidade ++
                 salvarCarrinho(carrinho)
                 renderCarrinho()
             }
@@ -315,23 +331,21 @@ function mudarcamisa() {
 
 // mudar quantidade 
 
-const inputQuant = document.getElementById('NumInput')
-let valor = Number(inputQuant.placeholder)
+let inputQuant = document.getElementById('NumInput')
+let valor = inputQuant.placeholder
 
 
-document.getElementById('btReduce').addEventListener("click", function () {
-    if (inputQuant.placeholder > 1) {
-        valor - 100
+document.getElementById('btReduce').addEventListener('click', function () {
+    if (valor > 1) {
+        valor--
         inputQuant.placeholder = valor
     }
-    console.log(valor)
 })
 document.getElementById('btAdd').addEventListener('click', function () {
-    if (inputQuant.placeholder < 100) {
+    if (valor < 100) {
         valor++
         inputQuant.placeholder = valor
     }
-    console.log(valor)
 })
 
 // mudar conteudo recomendado na pagina de compra 
