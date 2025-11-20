@@ -16,7 +16,7 @@
 
     <nav id="navegacao">
         <div>
-            <button class="menu" id="openMenu">
+            <button class="menu" id="OpenMenu">
                 <span class="material-symbols-outlined">
                     menu
                 </span>
@@ -60,7 +60,7 @@
         <div class="menuLateral">
             <div class="mtitulo">
                 <h1>Street Style</h1>
-                <button id="fecharMenu">
+                <button id="FecharMenu">
                     <span class="material-symbols-outlined">
                         close
                     </span>
@@ -379,7 +379,11 @@
 
     <script src="../javaScript/responsividade.js"></script>
     <script src="../javaScript/order.js"></script>
-    <script src="../javaScript/btns.js"></script>
+    <script src="../javaScript/btns.js">
+        window.addEventListener('DOMContentLoaded', () => {
+    renderCarrinho()
+})
+    </script>
 </body>
 
 </html>

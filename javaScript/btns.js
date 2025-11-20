@@ -33,6 +33,20 @@ search.addEventListener('blur', () => {
 // abrir e fechar menu lateral
 const menuLateral = document.getElementById('Menulateral')
 
+// pagina inicial
+
+document.getElementById('FecharMenu').addEventListener('click', function () {
+    const btreturn = document.getElementById('btReturn')
+    menuLateral.style.display = 'none'
+})
+
+document.getElementById('OpenMenu').addEventListener('click', function () {
+    const btreturn = document.getElementById('btReturn')
+    menuLateral.style.display = 'grid'
+})
+
+// pagina de compra 
+
 document.getElementById('fecharMenu').addEventListener('click', function () {
     const btreturn = document.getElementById('btReturn')
     btreturn.innerText = 'undo'
@@ -69,19 +83,20 @@ document.getElementById('btnLoja').addEventListener('click', function () {
 function OpenCart() {
     const carrinho = document.getElementById('Cart')
     carrinho.style.display = 'flex'
+    renderCarrinho()
 }
 // mudar quantidade na div carrinho 
 let NumCart = document.getElementById('NumCart')
 let valorCart = NumCart.placeholder
 
 document.getElementById('reduQuant').addEventListener('click', function () {
-    if (valorCart > 1){
+    if (valorCart > 1) {
         valorCart--
         NumCart.placeholder = valorCart
     }
 })
 document.getElementById('adiQuant').addEventListener('click', function () {
-    if (valorCart < 100){
+    if (valorCart < 100) {
         valorCart++
         NumCart.placeholder = valorCart
     }
@@ -163,7 +178,7 @@ function ativarBotoesCarrinho() {
         btn.addEventListener('click', (e) => {
             const idx = Number(btn.dataset.index);
             if (Number.isInteger(idx) && carrinho[idx]) {
-                carrinho[idx].quantidade ++
+                carrinho[idx].quantidade++
                 salvarCarrinho(carrinho)
                 renderCarrinho()
             }
